@@ -17,10 +17,10 @@ export default async function RootLayout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ lang: "es" | "es" | "br" }>;
+  params: { lang: "es" | "es" | "br" },
 }>) {
   
-  const lang = (await params).lang;
+  const { lang } = params;
   
   return (
     <html lang={lang}>

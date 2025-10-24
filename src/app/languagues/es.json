@@ -1,0 +1,55 @@
+{
+    "homepage":{
+        "navbar":{
+            "clients":"Clientes",
+            "products":"Productos",
+            "aboutUs":"Sobre nosotros",
+            "contactUs":"Contactanos",
+            "bannerSmall":"desde 1978"
+        },
+        "section":{
+            "title":"Diseñamos y fabricamos piezas de alta calidad"
+        },
+        "dividers":{
+            "companys":"Trabajamos junto a",
+            "works":"Trabajos realizados",
+            "about-us":"Sobre nosotros",
+            "mision":"mision",
+            "help":"Como podemos Ayudar",
+            "machines":"Maquinas",
+            "other-machines":"Tambein contamos",
+            "contact-us":"contactanos",
+            "join-us":"Sumate a Dinort"
+        },
+        "footer":{
+            "headers":{
+                "brand":"Dinort Mecanizados S.A.S",
+                "navegation":"Navegar",
+                "politics":"Politicas",
+                "socials":"Social"
+            },
+            "brand-section":{
+                "location":"San Miguel de Tucuman, Tucuman -- Argentina",
+                "email":"mecanizados@dinort.com.ar"
+            },
+            "navegation-section":{
+                "clients":"Clientes",
+                "products":"Productos",
+                "companys":"Empresas",
+                "about-us":"Sobre nosotros"
+            },
+            "politics-section":{
+                "politics":"Terminos y condiciones"
+            },
+            "socials-section":{
+                "wpp":"WhatsApp",
+                "lnk":"Linked in",
+                "ig":"Instagram"
+            },
+            "rights-section":{
+                "rights":"Dinort Mecanizados. Todos los derechos reservados",
+                "back-top":"Volver al principio"
+            }
+        }
+    }
+}

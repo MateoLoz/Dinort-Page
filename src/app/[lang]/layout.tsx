@@ -12,12 +12,9 @@ export const metadata: Metadata = {
     }
 };
 
-export default async function RootLayout({
-  children,
-  params,
-}: Readonly<{
+export default async function RootLayout({children,params}: Readonly<{
   children: React.ReactNode;
-  params: { lang: "es" | "es" | "br" },
+  params: { lang: "es" | "en" | "br" },
 }>) {
   
   const { lang } = params;

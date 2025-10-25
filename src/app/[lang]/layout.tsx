@@ -11,15 +11,19 @@ export const metadata: Metadata = {
     }
 };
 
+interface LayoutParams {
+  lang: "es" | "en" | "br";
+}
+
 interface LayoutProps {
   children: React.ReactNode;
-  params: Promise<{ lang: "es" | "en" | "br" }>; 
+  params: LayoutParams | Promise<LayoutParams>;
 }
 
 export default async function RootLayout({children,params}: LayoutProps) {
   
-  const resolvedParams = await params; 
-  const { lang } = resolvedParams; 
+  const resolvedParams = params instanceof Promise ? await params : params;
+  const { lang } = resolvedParams;
   
   return (
     <html lang={lang}>

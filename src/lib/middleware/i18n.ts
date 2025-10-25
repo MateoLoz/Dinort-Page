@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-const supportedLocales = ['es', 'es', 'br'];
+const supportedLocales = ['es', 'en', 'br'];
 const defaultLocale = 'es';
 
 export function getLocaleFromPath(pathname: string) {

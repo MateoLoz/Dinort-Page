@@ -1,4 +1,3 @@
-"server-side"
 import Banner from "@/components/custom/Banner";
 import { getDictionary } from "../i18n/dictionary";
 import NavBar from "@/components/custom/Navbar";

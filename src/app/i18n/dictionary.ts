@@ -6,6 +6,7 @@ const dictonaries = {
     br: import('../languagues/br.json').then(m => m.default),
 }
 
-export const getDictionary = async (locale: 'es' | 'en' | 'br') => {
+export const getDictionary = async (locale: string) => {
+  if(locale !== 'es' && locale !== 'en' && locale !== 'br') return dictonaries['es'];
   return dictonaries[locale];
 }

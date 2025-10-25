@@ -11,21 +11,15 @@ export const metadata: Metadata = {
     }
 };
 
-export async function generateStaticParams() {
-  return [{ lang: "es" }, { lang: "en" }, { lang: "br" }];
+type layoutProps = {
+  children: React.ReactNode;
+  params: Promise<{lang: string}>
 }
 
 
-
-
-
-export default async function RootLayout({children,
-  params}: Readonly<{
-  children: React.ReactNode,
-  params: Promise<{lang: "es" | "en" | "br"}>
-}>) {
+export default async function RootLayout({children,params}: layoutProps) {
   
-  const lang  =  (await params).lang;
+  const { lang } = await params;
   
   return (
     <html lang={lang}>

@@ -4,9 +4,9 @@ import NavBar from "@/components/custom/Navbar";
 import TextBanner from "@/components/custom/TextBanner";
 import Divider from "@/components/custom/Divider";
 
-export default async function Home({params}: {params: Promise<{ lang: "es" | "en" | "br" }>}) {
+export default async function Home({params}: {params: { lang: "es" | "en" | "br"}}) {
 
-  const lang = (await params).lang;
+  const { lang } = params;
   const t =  (await getDictionary(lang)).homepage;
  
   return (

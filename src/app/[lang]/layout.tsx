@@ -17,13 +17,13 @@ interface LayoutParams {
 
 interface LayoutProps {
   children: React.ReactNode;
-  params: LayoutParams | Promise<LayoutParams>;
+  // ⚠️ Next.js espera una Promise
+  params: Promise<LayoutParams>;
 }
 
 export default async function RootLayout({children,params}: LayoutProps) {
   
-  const resolvedParams = params instanceof Promise ? await params : params;
-  const { lang } = resolvedParams;
+  const { lang } = await params;
   
   return (
     <html lang={lang}>

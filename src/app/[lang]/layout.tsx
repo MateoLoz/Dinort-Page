@@ -11,6 +11,10 @@ export const metadata: Metadata = {
     }
 };
 
+export async function generateStaticParams() {
+  return [{ lang: "es" }, { lang: "en" }, { lang: "br" }];
+}
+
 interface LayoutParams {
   lang: "es" | "en" | "br";
 }

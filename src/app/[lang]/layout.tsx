@@ -15,19 +15,17 @@ export async function generateStaticParams() {
   return [{ lang: "es" }, { lang: "en" }, { lang: "br" }];
 }
 
-interface LayoutParams {
-  lang: "es" | "en" | "br";
-}
 
-interface LayoutProps {
-  children: React.ReactNode;
-  // ⚠️ Next.js espera una Promise
-  params: Promise<LayoutParams>;
-}
 
-export default async function RootLayout({children,params}: LayoutProps) {
+
+
+export default async function RootLayout({children,
+  params}: Readonly<{
+  children: React.ReactNode,
+  params: Promise<{lang: "es" | "en" | "br"}>
+}>) {
   
-  const { lang } = await params;
+  const lang  =  (await params).lang;
   
   return (
     <html lang={lang}>

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "../globals.css";
 
-
 export const metadata: Metadata = {
   title: "Dinort",
   description: "Dinort Mecanizados S.A.S",
@@ -12,15 +11,21 @@ export const metadata: Metadata = {
     }
 };
 
-export default async function RootLayout({
-  children,
-  params,
-}: Readonly<{
-  children: React.ReactNode;
-  params: { lang: "es" | "es" | "br" },
+export async function generateStaticParams() {
+  return [{ lang: "es" }, { lang: "en" }, { lang: "br" }];
+}
+
+
+
+
+
+export default async function RootLayout({children,
+  params}: Readonly<{
+  children: React.ReactNode,
+  params: Promise<{lang: "es" | "en" | "br"}>
 }>) {
   
-  const { lang } = params;
+  const lang  =  (await params).lang;
   
   return (
     <html lang={lang}>

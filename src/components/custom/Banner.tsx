@@ -19,7 +19,7 @@ return(
         />
 
         <aside className="absolute top-[72vh]  w-full px-8 md:px-10 flex justify-end">
-            <small className="text-[var(--navbarPrimaryColor)]">
+            <small className="text-[var(--navbarPrimaryColor)] font-s uppercase">
                 {bannerSmall}
             </small>
         </aside>

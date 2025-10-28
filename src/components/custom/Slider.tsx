@@ -1,0 +1,51 @@
+
+"use client";
+
+import '../../app/globals.css';
+import { useQuery } from '@tanstack/react-query';
+import { getHero } from '@/server/hero';
+import Image from 'next/image';
+
+
+type CompanysHero = {
+   name:string,
+   ClientLogo: string
+}
+
+export function Companys() {
+
+    const {data, isLoading, error} = useQuery({ queryKey: ["hero"], queryFn:  getHero});
+
+    if(isLoading) return <h2>Cargando..</h2>
+      console.log(data);
+    if(error) throw new Error(error.message);
+
+    return(
+      <>
+      <div className="carousel">
+          <div className="group">
+          {data.hero.map((companys : CompanysHero) => (
+            <Slider key={companys.name} name={companys.name} ClientLogo={companys.ClientLogo}/>
+          ))}
+          </div>
+          <div aria-hidden className="group">
+      {data.hero.map((companys : CompanysHero) => (
+            <Slider key={companys.name} name={companys.name} ClientLogo={companys.ClientLogo}/>
+          ))}
+      </div>
+      </div>
+      </>
+    )
+
+   
+}
+
+
+export default function Slider ({name, ClientLogo} : CompanysHero) {
+
+   return(
+         <article className="cards">
+           <Image height={80} width={130} src={ClientLogo} alt={name} />
+         </article>
+   )
+}

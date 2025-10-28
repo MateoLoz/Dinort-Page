@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "../globals.css";
+import { TanstackProvider } from "@/components/providers/tanstack-provider";
 
 export const metadata: Metadata = {
   title: "Dinort",
@@ -26,9 +27,9 @@ export default async function RootLayout({children,params}: layoutProps) {
       <head>
       </head>
       <body
-        className={`p-2 sm:p-4 antialiased bg-[var(--mainBackground)]`}
+        className={`p-2 sm:p-4 antialiased bg-main`}
       >
-        {children}
+        <TanstackProvider>{children}</TanstackProvider>
       </body>
     </html>
   );

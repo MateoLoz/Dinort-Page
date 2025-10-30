@@ -21,7 +21,7 @@ export function Companys() {
     if(error) throw new Error(error.message);
 
     return(
-      <>
+      <div className='h-[20vh] flex justify-center items-center'>
       <div className="carousel">
           <div className="group">
           {data.hero.map((companys : CompanysHero) => (
@@ -34,7 +34,7 @@ export function Companys() {
           ))}
       </div>
       </div>
-      </>
+      </div>
     )
 
    

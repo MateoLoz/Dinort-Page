@@ -17,7 +17,7 @@ export function Companys() {
     const {data, isLoading, error} = useQuery({ queryKey: ["hero"], queryFn:  getHero});
 
     if(isLoading) return <h2>Cargando..</h2>
-      console.log(data);
+    
     if(error) throw new Error(error.message);
 
     return(

@@ -6,6 +6,8 @@ import Divider from "@/components/custom/Divider";
 import Work from "@/components/custom/Work";
 import { Companys } from "@/components/custom/Slider";
 
+
+
 export default async function Home({params}: {params: Promise<{ lang: string}>}) {
 
   const {lang} = await params;

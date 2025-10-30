@@ -27,7 +27,7 @@ export default async function RootLayout({children,params}: layoutProps) {
       <head>
       </head>
       <body
-        className={`p-2 sm:p-4 antialiased bg-main`}
+        className={`p-2 sm:p-4 h-auto antialiased  bg-main`}
       >
         <TanstackProvider>{children}</TanstackProvider>
       </body>

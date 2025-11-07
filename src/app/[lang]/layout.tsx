@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "../globals.css";
+import { TanstackProvider } from "@/components/providers/tanstack-provider";
 
 export const metadata: Metadata = {
   title: "Dinort",
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     "shortcut":"/Dinort.svg",
     "apple":"/Dinort.svg"
     }
+  
 };
 
 type layoutProps = {
@@ -25,10 +27,8 @@ export default async function RootLayout({children,params}: layoutProps) {
     <html lang={lang}>
       <head>
       </head>
-      <body
-        className={`p-2 sm:p-4 antialiased bg-[var(--mainBackground)]`}
-      >
-        {children}
+      <body className={`p-2 sm:p-4 antialiased bg-main`}>
+        <TanstackProvider>{children}</TanstackProvider>
       </body>
     </html>
   );

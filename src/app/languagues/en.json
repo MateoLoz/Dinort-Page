@@ -1,5 +1,6 @@
 {
     "homepage":{
+        "lang":"en",
         "navbar":{
             "clients":"Clients",
             "products":"Products",
@@ -8,18 +9,33 @@
             "bannerSmall":"since 1978"
         },
         "section":{
-           "title":"We design and manufacture high-quality parts."
+           "title":"We design and manufacture",
+           "subtitle":"high-quality parts."
         },
         "dividers":{
             "companys":"We work alongside",
             "works":"Jobs done",
-            "about-us":"About us",
-            "mision":"Mision",
-            "help":"How can we help",
+           "about-us":"About us",
+           "we":"Who we are",
+            "whatwedo":"What we do",
+            "mision":"our mision",
+            "help":"How can we help ?",
             "machines":"Machines",
             "other-machines":"Other Machines",
             "contact-us":"Contact-us",
             "join-us":"Join Dinort"
+        },
+        "accordion":{
+            "headers":{
+                "item-1":"Best cost/benefit ratio",
+                "item-2":"State-of-the-art technology",
+                "item-3":"Experience in multiple sectors"
+            },
+            "body":{
+              "description-1":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+              "description-2":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+              "description-3":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+            } 
         },
         "footer":{
             "headers":{

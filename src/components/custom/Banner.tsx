@@ -8,7 +8,7 @@ type BannerProps = {
     bannerSmall:string
 }
 
-export default function Banner ({bannerSmall}: BannerProps) {
+function Banner ({bannerSmall}: BannerProps) {
 return(
     <div className=" z-0 rounded-xl bg-[var(--bannerPrimaryBackground)] w-full h-[75vh] flex flex-col gap-4 justify-center items-center">
         <Image
@@ -19,10 +19,12 @@ return(
         />
 
         <aside className="absolute top-[72vh]  w-full px-8 md:px-10 flex justify-end">
-            <small className="text-[var(--navbarPrimaryColor)]">
+            <small className="text-[var(--navbarPrimaryColor)] font-s uppercase">
                 {bannerSmall}
             </small>
         </aside>
     </div>
 )
 }
+
+export default Banner

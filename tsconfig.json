@@ -24,6 +24,8 @@
       "@ui/*":["./src/components/ui/*"],
       "@custom/*":["./src/components/custom/*"],
       "@images/*":["./public/images/*"],
+      "@env/*":["./src/lib/*"],
+      "@globalstyle/*":["./src/app/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

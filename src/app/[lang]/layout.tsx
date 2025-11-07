@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "shortcut":"/Dinort.svg",
     "apple":"/Dinort.svg"
     }
+  
 };
 
 type layoutProps = {
@@ -26,9 +27,7 @@ export default async function RootLayout({children,params}: layoutProps) {
     <html lang={lang}>
       <head>
       </head>
-      <body
-        className={`p-2 sm:p-4 h-auto antialiased  bg-main`}
-      >
+      <body className={`p-2 sm:p-4 antialiased bg-main`}>
         <TanstackProvider>{children}</TanstackProvider>
       </body>
     </html>

@@ -21,7 +21,7 @@ export function Companys() {
     if(error) throw new Error(error.message);
 
     return(
-      <div className='h-[20vh] flex justify-center items-center'>
+      <div className='h-[15vh] flex justify-center items-center'>
       <div className="carousel">
           <div className="group">
           {data.hero.map((companys : CompanysHero) => (
@@ -45,7 +45,7 @@ export default function Slider ({name, ClientLogo} : CompanysHero) {
 
    return(
          <article className="cards">
-           <Image height={80} width={130} src={ClientLogo} alt={name} />
+           <Image height={65} width={100} src={ClientLogo} alt={name} />
          </article>
    )
 }

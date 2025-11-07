@@ -8,7 +8,7 @@ type BannerProps = {
     bannerSmall:string
 }
 
-export default function Banner ({bannerSmall}: BannerProps) {
+function Banner ({bannerSmall}: BannerProps) {
 return(
     <div className=" z-0 rounded-xl bg-[var(--bannerPrimaryBackground)] w-full h-[75vh] flex flex-col gap-4 justify-center items-center">
         <Image
@@ -26,3 +26,5 @@ return(
     </div>
 )
 }
+
+export default Banner

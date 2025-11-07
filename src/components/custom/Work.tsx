@@ -50,16 +50,16 @@ export default function Work ({title} : WorkProps) {
     return(
         <div ref={scope} className="w-full h-full flex flex-col gap-2 pt-12 pb-12">
          <header className='h-24 flex items-center'>
-            <h2 className="text-5xl font-s font-normal">{title}</h2>
+            <h2 className="xl:text-5xl md:text-4xl text-3xl font-s font-normal">{title}</h2>
          </header>
-         <aside onDrag={handleMove} onMouseEnter={EnterCursor} onMouseMove={handleMove} onMouseLeave={leaveCursor} className="work-layout">
+         <aside onMouseEnter={EnterCursor} onMouseMove={handleMove} onMouseLeave={leaveCursor} className="work-layout">
             <Cursor/>
-           <div className='cursor-none bg-blue-200 rounded-lg' style={{gridArea:'box-1'}}>1</div>
-           <div className='cursor-none bg-blue-200 rounded-lg' style={{gridArea:'box-2'}}>2</div>
-           <div className='cursor-none bg-blue-200 rounded-lg' style={{gridArea:'box-3'}}>3</div>
-           <div className='cursor-none bg-blue-200 rounded-lg' style={{gridArea:'box-4'}}>4</div>
-           <div className='cursor-none bg-blue-200 rounded-lg' style={{gridArea:'box-5'}}>5</div>
-           <div className='cursor-none bg-blue-200 rounded-lg' style={{gridArea:'box-6'}}>6</div>
+           <div className='cursor-none bg-footer rounded-lg' style={{gridArea:'box-1'}}>1</div>
+           <div className='cursor-none bg-footer rounded-lg' style={{gridArea:'box-2'}}>2</div>
+           <div className='cursor-none bg-footer rounded-lg' style={{gridArea:'box-3'}}>3</div>
+           <div className='cursor-none bg-footer rounded-lg' style={{gridArea:'box-4'}}>4</div>
+           <div className='cursor-none bg-footer rounded-lg' style={{gridArea:'box-5'}}>5</div>
+           <div className='cursor-none bg-footer rounded-lg' style={{gridArea:'box-6'}}>6</div>
          </aside>
         </div>
     )

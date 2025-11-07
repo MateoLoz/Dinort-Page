@@ -1,5 +1,6 @@
 {
     "homepage":{
+        "lang":"br",
         "navbar":{
             "clients":"Clientes",
             "products":"Produtos",
@@ -15,12 +16,26 @@
             "companys":"trabalhamos juntos",
             "works":"trabalhos realizados",
             "about-us":"Sobre nós",
-            "mision":"missão",
-            "help":"Como podemos ajudar",
+            "we":"Quem somos",
+            "whatwedo":"O que fazemos",
+            "mision":"nossa missão",
+            "help":"¿ Como podemos ajudar ?",
             "machines":"Máquinas",
             "other-machines":"Tambein contamos",
             "contact-us":"Contate-nos",
             "join-us":"Junte-se à Dinort"
+        },
+        "accordion":{
+            "headers":{
+                "item-1":"Melhor relação custo/benefício",
+                "item-2":"Tecnologia de última geração",
+                "item-3":"Experiência em vários setores"
+            },
+            "body":{
+              "description-1":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+              "description-2":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+              "description-3":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+            } 
         },
         "footer":{
             "headers":{

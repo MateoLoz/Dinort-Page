@@ -11,7 +11,7 @@ export default function TextBanner ({title, subtitle}: TextBannerProps) {
 
     return(
 <motion.div 
-  className="w-full h-[40vh] flex flex-col gap-2 justify-center items-center"
+  className="w-full h-auto sm:py-24 py-16  flex flex-col gap-2 justify-center items-center"
 >
   
   <div className="overflow-hidden">

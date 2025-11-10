@@ -44,27 +44,27 @@
                 "politics":"Politics",
                 "socials":"Social"
             },
-            "brand-section":{
+            "brand_section":{
                 "location":"San Miguel de Tucuman, Tucuman -- Argentina",
                 "email":"mecanizados@dinort.com.ar"
             },
-            "navegation-section":{
+            "navegation_section":{
                 "clients":"Clients",
                 "products":"Products",
                 "companys":"Companys",
-                "about-us":"About us"
+                "about_us":"About us"
             },
-            "politics-section":{
+            "politics_section":{
                 "politics":"Terms and conditions"
             },
-            "socials-section":{
+            "socials_section":{
                 "wpp":"WhatsApp",
                 "lnk":"Linked in",
                 "ig":"Instagram"
             },
-            "rights-section":{
+            "rights_section":{
                 "rights":"Dinort Mecanizados. All rights reserved",
-                "back-top":"back to top"
+                "back_top":"back to top"
             }
         }
     }

@@ -23,7 +23,7 @@ export default async function Home({params}: {params: Promise<{ lang: string}>})
       <Sections.machines machineTitle={t.dividers["machines"]} lang={lang}/>
        <Divider.primary title={t.dividers["other-machines"]} alignment={"start"}/>
        <Sections.tag lang={lang}/>
-       <Footer/>
+       <Footer footer={t.footer} />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 "use client"
 
+import ArrowAlt from '@/icons/ArrowAlt';
 import '../../app/globals.css';
 import Cursor from '@/icons/Cursor';
 
@@ -48,9 +49,10 @@ export default function Work ({title} : WorkProps) {
     }
 
     return(
-        <div ref={scope} className="w-full h-full flex flex-col gap-2 pt-12 pb-12">
-         <header className='h-24 flex items-center'>
-            <h2 className="xl:text-5xl md:text-4xl text-3xl font-s font-normal">{title}</h2>
+        <div ref={scope} className="w-full h-full flex flex-col gap-2 sm:py-12 py-6">
+         <header className='flex flex-row gap-2 items-center md:pb-12 pb-6 pl-4'>
+            <h2 className="xl:text-[40px] text-2xl sm:text-3xl font-s font-normal">{title}</h2>
+            <ArrowAlt className='lg:w-[40px] lg:h-[40px] md:w-[36px] md:h-[36px] w-[32px] h-[32px]' fill='#000'/>
          </header>
          <aside onMouseEnter={EnterCursor} onMouseMove={handleMove} onMouseLeave={leaveCursor} className="work-layout">
             <Cursor/>

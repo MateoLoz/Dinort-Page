@@ -203,7 +203,7 @@
 
 .cards {
   height: 140px;
-  width: 160px;
+  width: 140px;
   min-height: 100px;
   min-width: 120px;
   text-align: center;
@@ -230,7 +230,7 @@
 
 @media (max-width: 1230px) {
   .work-layout {
-    grid-auto-rows:220px;
+    grid-auto-rows:200px;
     grid-template-areas:  
     "box-1 box-1 box-1 " 
     "box-1 box-1 box-1"
@@ -249,7 +249,7 @@
 
 @media (max-width: 500px) {
   .work-layout {
-    grid-auto-rows:180px;
+    grid-auto-rows:130px;
     grid-template-areas:  
     "box-1 box-1 box-1 " 
     "box-1 box-1 box-1"

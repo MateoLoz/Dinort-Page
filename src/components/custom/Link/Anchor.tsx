@@ -1,4 +1,4 @@
-import FlipLink from "../FlipLink";
+import FlipLink from "./FlipLink";
 
 const Anchor = {
     flip:FlipLink

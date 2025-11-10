@@ -30,7 +30,7 @@ const MachineTagSection = ({lang} : MachineTagProps) => {
      }
 
     return(
-        <div className="lg:px-36 px-12 w-full grid  grid-cols-[repeat(auto-fit,minmax(130px,1fr))]  md:grid-cols-[repeat(auto-fit,minmax(270px,1fr))] lg:grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-[10px] place-center items-center justify-center lg:py:12 py-0 lg:my-12 my-4">
+        <div className="lg:px-36 md:px-12 px-4 w-full grid  grid-cols-[repeat(auto-fit,minmax(120px,1fr))] sm:grid-cols-[repeat(auto-fit,minmax(160px,1fr))]  md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] lg:grid-cols-[repeat(auto-fit,minmax(330px,1fr))] lg:gap-[10px] md:gap-[8px] gap-[6px] place-center items-center justify-center lg:py:12 py-0 lg:mb-12 mb-6">
          {machineTags.metadata.tags.map((tag : {title: string } )=> (
            <Tag.Machine key={tag.title} className="font-main text-xs md:text-lg text-white font-normal">
             {tag.title}

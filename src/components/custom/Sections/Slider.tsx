@@ -1,7 +1,7 @@
 
 "use client";
 
-import '../../app/globals.css';
+import '../../../app/globals.css'
 import { useQuery } from '@tanstack/react-query';
 import { getHero } from '@/server/hero';
 import Image from 'next/image';
@@ -45,7 +45,7 @@ export default function Slider ({name, ClientLogo} : CompanysHero) {
 
    return(
          <article className="cards">
-           <Image height={65} width={100} src={ClientLogo} alt={name} />
+           <Image height={65} width={105} src={ClientLogo} alt={name} />
          </article>
    )
 }

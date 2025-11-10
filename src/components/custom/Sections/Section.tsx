@@ -1,14 +1,14 @@
 
-import { Companys } from "../Slider";
-import Banner from "../Banner";
+import { Companys } from "./Slider";
+import Banner from "./Banner";
 import TextBanner from "../TextBanner";
-import AboutUs from "../About-Us";
-import Mision from "../Mision";
+import AboutUs from "./About-Us";
+import Mision from "./Mision";
 import Work from "../Work";
-import Help from "../Help";
-import Machines from "../Machines";
+import Help from "./Help";
+import Machines from "./Machines";
 import MachineTagSection from "./TagSection";
-import NavBar from "../Navbar";
+import NavBar from "../NavBar/Navbar";
 
 const Sections = {
     navbar:NavBar,

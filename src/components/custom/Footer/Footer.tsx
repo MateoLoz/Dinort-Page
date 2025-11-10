@@ -1,63 +1,54 @@
-const Footer = () => {
+import { FooterSection } from "./sections/FooterSection";
+
+
+type FooterProps = {
+    "footer":{
+        "headers":{
+            "brand":string,
+            "navegation":string,
+            "politics":string,
+            "socials":string
+        },
+        "brand_section":{
+            "location":string,
+            "email":string
+        },
+        "navegation_section":{
+            "clients":string,
+            "products":string,
+            "companys":string,
+            "about_us":string
+        },
+        "politics_section":{
+            "politics":string
+        },
+        "socials_section":{
+            "wpp":string,
+            "lnk":string,
+            "ig":string
+        },
+        "rights_section":{
+            "rights":string,
+            "back_top":string
+        }
+    }
+}
+
+const Footer = ({ footer } : FooterProps ) => {
     return(
-        <footer className="w-full h-auto bg-footer md:px-8 px-4 py-4 flex flex-col gap-2">
-           <aside className="h-[85%] flex flex-row  justify-between gap-[15px]">
-              <section className="flex flex-col gap-2">
-                <h2 className="lg:text-[26px] text-[22px] text-white font-main font-medium">Dinort Mecanizados S.A.S</h2>
-                <span className="lg:text-[16px] md:text-[14px] text-[12px] font-main font-normal text-gray-1">San Miguel de Tucuman, Tucuman -- Argentina</span>
-                <span className="lg:text-[16px] md:text-[14px] text-[12px] font-main font-normal text-gray-1">mecanizados@dinort.com.ar</span>
-              </section>
-              <section className="flex flex-row gap-12">
-                <aside className="flex flex-col gap-2">
-                  
-                <h2 className="lg:text-[22px] text-[18px] text-white font-main font-medium">
-                    Navegar
-                </h2>
-                <ul className="flex flex-col gap-1">
-                    <li className="text-gray-2 font-main font-light font-normal text-[12px]">clientes</li>
-                    <li className="text-gray-2 font-main font-light font-normal text-[12px]">Productos</li>
-                    <li className="text-gray-2 font-main font-light font-normal text-[12px]">Empresas</li>
-                    <li className="text-gray-2 font-main font-light font-normal text-[12px]">Sobre nosotros</li>
-                </ul>
-
-                </aside>
-
-                <aside className="flex flex-col gap-2">
-                  
-                <h2 className="lg:text-[22px] text-[18px] text-white font-main font-medium">
-                    Politicas
-                </h2>
-                <ul className="flex flex-col gap-1">
-                    <li className="text-gray-2 font-main font-light font-normal text-[14px]">Clientes</li>
-                    <li className="text-gray-2 font-main font-light font-normal text-[14px]">Productos</li>
-                    <li className="text-gray-2 font-main font-light font-normal text-[14px]">Empresas</li>
-                    <li className="text-gray-2 font-main font-light font-normal text-[14px]">Sobre nosotros</li>
-                </ul>
-
-                </aside>
-
-                <aside className="flex flex-col gap-2">
-                  
-                <h2 className="lg:text-[22px] text-[18px] text-white font-main font-medium">
-                    Social
-                </h2>
-                <ul className="flex flex-col gap-1">
-                    <li className="text-gray-2 font-main font-light font-normal text-[12px]">clientes</li>
-                    <li className="text-gray-2 font-main font-light font-normal text-[12px]">Productos</li>
-                    <li className="text-gray-2 font-main font-light font-normal text-[12px]">Empresas</li>
-                    <li className="text-gray-2 font-main font-light font-normal text-[12px]">Sobre nosotros</li>
-                </ul>
-
-                </aside>
-        
-              </section>
+        <footer className="w-full rounded-md h-auto bg-footer md:px-8 px-4 py-4 flex flex-col gap-2">
+           <aside className="h-auto md:min-h-[45vh] pb-6 flex md:flex-row flex-col justify-between gap-[15px] ">
+              <FooterSection.header brand={footer.headers.brand} location={footer.brand_section.location} email={footer.brand_section.email}/>
+              <section className="flex flex-row   gap-4 md:gap-12 pt-6 md:pt-0">
+                <FooterSection.navegation title={footer.headers.navegation} navegation_section={footer.navegation_section}/>
+                <FooterSection.politics title={footer.headers.politics} politics_section={footer.politics_section}/>
+                <FooterSection.social title={footer.headers.socials} socials_section={footer.socials_section}/>
+            </section>
            </aside>
-           <aside className=" mt-4 h-auto flex flex-row items-center justify-between">
-              <small className="text-gray-1 text-start font-main font-normal text-[10px] md:text-[14px]">@2025  Dinort Mecanizados. Todos los derechos reservados.</small>
-              <span className="text-gray-1 font-main font-normal text-[10px] md:text-[14px]">Volver al principio</span>
-           </aside>
+           <FooterSection.bottom/>
         </footer>
     )
 }
 
 export default Footer;
+

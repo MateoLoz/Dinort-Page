@@ -2,7 +2,8 @@
 
 import getMachines from "@/server/machines";
 import { useQuery } from "@tanstack/react-query";
-import MachineCard from "./MachineCard";
+import MachineCard from "../Cards/MachineCard";
+import { Card } from "../Cards/Cards";
 import ArrowAlt from "@/icons/ArrowAlt";
 
 type MachineProps = {
@@ -26,8 +27,11 @@ export default function Machines ({lang,machineTitle} : MachineProps)  {
               <h2 className="font-main font-normal text-xl">{machineTitle}</h2>
               <ArrowAlt className="trasform-[rotate(90deg)]" width={42} height={42} fill="#000" />
             </header>
-            <section className="w-full flex flex-row gap-4 justify-center">
-                Skeleton!
+            <section className="w-full grid grid-cols-[repeat(auto-fit,minmax(330px,1fr))] gap-[15px] justify-center">
+                <Card.machineSkeleton/>
+                <Card.machineSkeleton/>
+                <Card.machineSkeleton/>
+                <Card.machineSkeleton/>
             </section>
         </div>
     
@@ -35,15 +39,14 @@ export default function Machines ({lang,machineTitle} : MachineProps)  {
     } 
 
   return(
-    <div className="w-full flex flex-col justify-center items-center gap-2  px-4 mb-12 md:mt-0 mt-12">
+    <div className="w-full flex flex-col justify-center items-center gap-2  px-4 mb-12 lg:mt-0 md:mt-12 mt-6">
         <header className="w-full flex flex-row gap-2 items-center  mb-12">
-        <h2 className="font-main font-normal text-[40px]">{machineTitle}</h2>
-        <ArrowAlt className="trasform-[rotate(90deg)]" width={42} height={42} fill="#000" />
+        <h2 className="font-main font-normal xl:text-[40px] sm:text-3xl text-2xl">{machineTitle}</h2>
+        <ArrowAlt className="lg:w-[40px] lg:h-[40px] md:w-[36px] md:h-[36px] w-[32px] h-[32px]"  fill="#000" />
         </header>
         <section className="w-full grid grid-cols-[repeat(auto-fit,minmax(330px,1fr))] gap-[15px] justify-center">
         {data.machines.map((items : { id: string; machineName: string; description: string, machineImage: string }) => (
-             <MachineCard key={items.id} machineName={items.machineName} description={items.description} machineImage={items.machineImage} />
-          
+            <Card.machine key={items.id} machineName={items.machineName} description={items.description} machineImage={items.machineImage}/>
         ))}
         </section>
     </div>

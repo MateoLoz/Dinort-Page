@@ -1,7 +1,7 @@
 "use client"
 
-import Anchor from "./Link/Anchor"
-import Button from "./Button/Button"
+import Anchor from "../Link/Anchor"
+import Button from "../Button/Button"
 import Hamburger from "@/icons/Hamburger"
 
 

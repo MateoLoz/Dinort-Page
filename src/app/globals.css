@@ -3,63 +3,63 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@font-face{
-  font-family: 'helvetica Neue LT Std';
-  src:url('../../public/fonts/Helvetica_Neue_LT_Std.woff2') format('woff2');
+@font-face {
+  font-family: "helvetica Neue LT Std";
+  src: url("../../public/fonts/Helvetica_Neue_LT_Std.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-@font-face{
-  font-family: 'PP Neue Montreal';
-  src:url('../../public/fonts/ppneuemontreal-medium.woff2') format('woff2');
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("../../public/fonts/ppneuemontreal-medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
-@font-face{
-  font-family: 'PP Neue Montreal';
-  src:url('../../public/fonts/ppneuemontreal-italic.woff2') format('woff2');
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("../../public/fonts/ppneuemontreal-italic.woff2") format("woff2");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
 }
 
-@font-face{
-  font-family: 'PP Neue Montreal';
-  src:url('../../public/fonts/ppneuemontreal-book.woff2') format('woff2');
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("../../public/fonts/ppneuemontreal-book.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-@font-face{
-  font-family: 'Manrope';
-  src:url('../../public/fonts/Manrope-ExtraBold.woff2') format('woff2');
+@font-face {
+  font-family: "Manrope";
+  src: url("../../public/fonts/Manrope-ExtraBold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 :root {
-  --mainBackground:rgb(245, 240, 233);
+  --mainBackground: rgb(245, 240, 233);
   --navbarPrimaryColor: #fff;
   --bannerPrimaryBackground: #000;
-  --bannerSecondaryBackground: #002C59;
-  --btnPrimaryBackground: #002C59;
-  --btnSecondaryBackground: #FDCB5A;
+  --bannerSecondaryBackground: #002c59;
+  --btnPrimaryBackground: #002c59;
+  --btnSecondaryBackground: #fdcb5a;
   --headerPrimaryColor: #555555;
-  --headerSecondaryColor : #828282;
-  --footer-gray: #B7B7B7;
-  --footer-gray-s: #BABABA;
-  --headertheirdColor : #262626;
+  --headerSecondaryColor: #828282;
+  --footer-gray: #b7b7b7;
+  --footer-gray-s: #bababa;
+  --headertheirdColor: #262626;
   --sectionSecondaryColor: #000000;
   --sectionAboutUs: #060606;
-  --cardPrimaryColor: #001E41;
-  --cardSecondaryColor: #D9D9D9;
-  --cardTheirdColor: #0054A0;
+  --cardPrimaryColor: #001e41;
+  --cardSecondaryColor: #d9d9d9;
+  --cardTheirdColor: #0054a0;
   --footerPrimaryBackground: #001129;
   --font-neue: "PP Neue Montreal", sans-serif;
   --ff-secondary: "helvetica Neue LT Std", sans-serif;
@@ -119,9 +119,6 @@
   --color-help: var(--bannerSecondaryBackground);
   --color-contact: var(--btnPrimaryBackground);
 
-
-
-
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -156,7 +153,7 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-.carousel{
+.carousel {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -164,42 +161,46 @@
   margin-right: 12px;
   overflow-x: auto;
 
-
-	&::before {
-		background: linear-gradient(to right,  rgba(245, 240, 233) 0%,rgba(255,255,255,0) 100%);
-		content: "";
-		height: 140px;
+  &::before {
+    background: linear-gradient(
+      to right,
+      rgba(245, 240, 233) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    content: "";
+    height: 140px;
     width: 130px;
-		position: absolute;
+    position: absolute;
     left: 0;
-		z-index: 2;
-	}
+    z-index: 2;
+  }
 
   &::after {
-		background: linear-gradient(to right,  rgba(245, 240, 233) 0%,rgba(255,255,255,0) 100%);
-		content: "";
-		height: 140px;
+    background: linear-gradient(
+      to right,
+      rgba(245, 240, 233) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    content: "";
+    height: 140px;
     width: 130px;
-		position: absolute;
+    position: absolute;
     rotate: 180deg;
     right: 0;
-		z-index: 2;
-	}
-	
+    z-index: 2;
+  }
 }
-
-
 
 .carousel::-webkit-scrollbar {
   display: none;
 }
 
-.group{
+.group {
   display: flex;
   align-items: center;
   justify-content: center;
   animation: slide 45s infinite linear;
-  gap:3rem;
+  gap: 3rem;
   padding-right: 3rem;
 }
 
@@ -220,59 +221,62 @@
   min-height: 100vh;
   display: grid;
   grid-auto-columns: auto;
-  grid-auto-rows:300px;
+  grid-auto-rows: 240px;
   gap: 8px;
-  grid-template-areas:  
-  "box-1 box-1 box-1 box-1 box-2 box-2" 
-  "box-1 box-1 box-1 box-1 box-2 box-2"
-  "box-3 box-3 box-3 box-3 box-3 box-3"
-  "box-3 box-3 box-3 box-3 box-3 box-3"
-  "box-4 box-4 box-5 box-5 box-6 box-6" ; 
+  grid-template-areas:
+    "box-1 box-1 box-1 box-1 box-2 box-2"
+    "box-1 box-1 box-1 box-1 box-2 box-2"
+    "box-3 box-3 box-3 box-3 box-3 box-3"
+    "box-3 box-3 box-3 box-3 box-3 box-3"
+    "box-4 box-4 box-5 box-5 box-6 box-6";
 }
 
 @media (max-width: 1230px) {
   .work-layout {
-    grid-auto-rows:200px;
-    grid-template-areas:  
-    "box-1 box-1 box-1 " 
-    "box-1 box-1 box-1"
-    "box-2 box-2 box-2 "
-    "box-2 box-2 box-2 "
-    "box-3 box-3 box-3 "
-    "box-3 box-3 box-3 "
-    "box-4 box-4 box-4 "
-    "box-4 box-4 box-4 "
-    "box-5 box-5 box-5 "
-    "box-5 box-5 box-5 "
-    "box-6 box-6 box-6 "
-    "box-6 box-6 box-6 " ; 
+    grid-auto-rows: 180px;
+    grid-template-areas:
+      "box-1 box-1 box-1 "
+      "box-1 box-1 box-1"
+      "box-2 box-2 box-2 "
+      "box-2 box-2 box-2 "
+      "box-3 box-3 box-3 "
+      "box-3 box-3 box-3 "
+      "box-4 box-4 box-4 "
+      "box-4 box-4 box-4 "
+      "box-5 box-5 box-5 "
+      "box-5 box-5 box-5 "
+      "box-6 box-6 box-6 "
+      "box-6 box-6 box-6 ";
   }
 }
 
 @media (max-width: 500px) {
   .work-layout {
-    grid-auto-rows:130px;
-    grid-template-areas:  
-    "box-1 box-1 box-1 " 
-    "box-1 box-1 box-1"
-    "box-2 box-2 box-2 "
-    "box-2 box-2 box-2 "
-    "box-3 box-3 box-3 "
-    "box-3 box-3 box-3 "
-    "box-4 box-4 box-4 "
-    "box-4 box-4 box-4 "
-    "box-5 box-5 box-5 "
-    "box-5 box-5 box-5 "
-    "box-6 box-6 box-6 "
-    "box-6 box-6 box-6 " ; 
+    grid-auto-rows: 130px;
+    grid-template-areas:
+      "box-1 box-1 box-1 "
+      "box-1 box-1 box-1"
+      "box-2 box-2 box-2 "
+      "box-2 box-2 box-2 "
+      "box-3 box-3 box-3 "
+      "box-3 box-3 box-3 "
+      "box-4 box-4 box-4 "
+      "box-4 box-4 box-4 "
+      "box-5 box-5 box-5 "
+      "box-5 box-5 box-5 "
+      "box-6 box-6 box-6 "
+      "box-6 box-6 box-6 ";
   }
 }
 
 @keyframes slide {
-  from {translate: 0;}
-  to {translate: -100%;}
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
 }
-
 
 .hamburger-menu {
   display: flex;
@@ -284,7 +288,7 @@
 .hamburger-menu::after,
 .hamburger-menu::before,
 .hamburger-menu input {
-  content:"";
+  content: "";
   width: 24px;
   height: 3px;
   background: white;
@@ -338,7 +342,6 @@
     @apply bg-background text-foreground;
   }
 }
-
 
 @keyframes accordion-down {
   from {

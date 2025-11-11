@@ -39,3 +39,56 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+
+ <Popover>
+<PopoverTrigger asChild>
+    {children}
+</PopoverTrigger>
+<PopoverContent className="w-full h-full flex justify-center items-center bg-red-200">
+<Form {...form}>
+   <form>
+   <FormField
+  control={form.control}
+  name="firstName"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Nombre</FormLabel>
+      <FormControl>
+        <input placeholder="Juan" {...field} />
+      </FormControl>
+    </FormItem>
+  )}/>
+
+<FormField
+ control={form.control}
+ name="lastName"
+ render={({ field }) => (
+    <FormItem>
+        <FormLabel>Apellido</FormLabel>
+        <FormControl>
+        <input placeholder="Perez" {...field} />
+      </FormControl>
+    </FormItem>
+ )}
+/>
+
+<FormField
+ control={form.control}
+ name="coverLetter"
+ render={({ field }) => (
+    <FormItem>
+        <FormLabel>Carta de Presentacion (opcional)</FormLabel>
+        <FormControl>
+        <Textarea placeholder="escribe tu mensaje aqui."  {...field}/>
+      </FormControl>
+    </FormItem>
+ )}
+/>
+
+<button type="submit">Submit</button>
+   </form>
+</Form>
+</PopoverContent>
+ </Popover>

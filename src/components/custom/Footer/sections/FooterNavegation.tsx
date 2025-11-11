@@ -1,3 +1,5 @@
+import { LightArrow } from "@/icons/LightArrow"
+
 type FooterNavegationProps = {
    title:string
     navegation_section:{
@@ -63,9 +65,18 @@ export const FooterSocial = ({title, socials_section} : FooterSocialProps) =>  {
          {title}
         </h2>
         <ul className="flex flex-col gap-1 md:justify-start ">
-            <li className="text-gray-2 font-main font-light font-normal text-[12px] md:text-[14px]">{socials_section.wpp}</li>
-            <li className="text-gray-2 font-main font-light font-normal text-[12px] md:text-[14px]">{socials_section.lnk}</li>
-            <li className="text-gray-2 font-main font-light font-normal text-[12px] md:text-[14px]">{socials_section.ig}</li>
+            <li className="text-gray-2 font-main font-light font-normal text-[12px] md:text-[14px] flex flex-row items-center gap-1">
+                {socials_section.wpp}
+                <LightArrow width={12} height={12} transform="rotate(-45)"/>
+                </li>
+            <li className="text-gray-2 font-main font-light font-normal text-[12px] md:text-[14px] flex flex-row items-center gap-1">
+                {socials_section.lnk}
+                <LightArrow width={12} height={12} transform="rotate(-45)"/>
+                </li>
+            <li className="text-gray-2 font-main font-light font-normal text-[12px] md:text-[14px] flex flex-row items-center gap-1">
+                {socials_section.ig}
+                <LightArrow width={12} height={12} transform="rotate(-45)"/>
+                </li>
         </ul>
         </aside>
     )

@@ -23,6 +23,10 @@ export default async function Home({params}: {params: Promise<{ lang: string}>})
       <Sections.machines machineTitle={t.dividers["machines"]} lang={lang}/>
        <Divider.primary title={t.dividers["other-machines"]} alignment={"start"}/>
        <Sections.tag lang={lang}/>
+       <Divider.primary title={t.dividers["contact-us"]} alignment="center"/>
+       <Sections.contact title={t.contacts["title"]} btntitle={t.contacts["btntitle"]}/>
+       <Divider.left title={t.dividers["join-us"]} alignment="start"/>
+       <Sections.join title={t.join["title"]} description={t.join["description"]} btntitle={t.join["btntitle"]}/>
        <Footer footer={t.footer} />
     </div>
   );

@@ -9,6 +9,8 @@ import Help from "./Help";
 import Machines from "./Machines";
 import MachineTagSection from "./TagSection";
 import NavBar from "../NavBar/Navbar";
+import ContactUs from "./ContacUs";
+import JoinUs from "./JoinUs";
 
 const Sections = {
     navbar:NavBar,
@@ -20,7 +22,9 @@ const Sections = {
     mision:Mision,
     help:Help,
     machines:Machines,
-    tag:MachineTagSection
+    tag:MachineTagSection,
+    contact:ContactUs,
+    join:JoinUs
 }
 
 export default Sections

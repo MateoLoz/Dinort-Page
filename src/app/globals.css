@@ -107,6 +107,7 @@
   --color-footer: var(--footerPrimaryBackground);
   --color-gray-1: var(--footer-gray);
   --color-gray-2: var(--footer-gray-s);
+  --color-gray-3: var(--headerPrimaryColor);
   --color-divider: var(--headerPrimaryColor);
   --font-main: var(--font-neue);
   --font-s: var(--ff-secondary);
@@ -116,6 +117,7 @@
   --color-btn-secondary: var(--btnSecondaryBackground);
   --color-aboutUs: var(--sectionAboutUs);
   --color-help: var(--bannerSecondaryBackground);
+  --color-contact: var(--btnPrimaryBackground);
 
 
 

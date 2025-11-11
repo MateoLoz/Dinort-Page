@@ -25,6 +25,15 @@
             "contact-us":"contactanos",
             "join-us":"Sumate a Dinort"
         },
+        "contacts":{
+            "title":"Ponerse en contacto",
+            "btntitle":"Agendar Consulta"
+        },
+        "join":{
+            "title":"Trabaja con nosotros",
+            "description":"Únete a un equipo apasionado por la innovación y el crecimiento",
+            "btntitle":"Contactanos"
+        },
         "accordion":{
             "headers":{
                 "item-1":"Mejor relacion costo/beneficio",

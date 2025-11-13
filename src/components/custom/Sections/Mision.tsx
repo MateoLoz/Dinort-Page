@@ -46,7 +46,7 @@ export default function Mision({ lang, misionheader }: MisionProps) {
         <span className="uppercase font-main font-normal">{misionheader}</span>
       </header>
       <section className="w-full self-center flex-col gap-4 flex justify-center items-center">
-        <p className=" w-full text-center xl:pl-12 xl:pr-12 pl-4 pr-4 xl:pt-8 xl:pb-8 pt-4 pb-4 xl:text-[50px] lg:text-[40px] md:text-[35px] text-2xl font-main font-light font-italic">
+        <p className=" w-full text-center lg:pl-36 lg:pr-36 pl-4 pr-4 xl:pt-8 xl:pb-8 pt-4 pb-4 xl:text-[50px] lg:text-[40px] md:text-[35px] text-2xl font-main font-light font-italic">
           {`"${data?.mision}"`}
         </p>
         <aside className="w-full flex flex-row  gap-4 justify-center items-center">

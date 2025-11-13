@@ -10,6 +10,9 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+
+import CarouselForm from "../Carousel/CarouselForm";
+import { CarouselNext } from "@/components/ui/carousel";
 import {
   Form,
   FormControl,
@@ -19,6 +22,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
+import { CarouselItem } from "@/components/ui/carousel";
+import TextInput from "./Inputs/TextInput";
 
 const sourceEnum = z.enum([
   "LinkedIn",
@@ -89,103 +94,26 @@ export const JoinUsForm = ({ children }: JoinUsFormProps) => {
   return (
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent>
-        <DialogHeader className="flex justify-center">
+      <DialogContent className="md:p-4 p-2 w-full">
+        <DialogHeader className="flex justify-center items-center">
           <DialogTitle>Unirse a Dinort</DialogTitle>
         </DialogHeader>
-
+        
         <Form {...form}>
           <form
-            className="flex flex-row gap-4 my-4"
+            className="flex flex-row gap-4 mx-auto max-w-xs"
             onSubmit={form.handleSubmit(onSubmit)}
           >
-            ,
-            <section className="flex flex-col gap-4">
+            <CarouselForm>
+            <CarouselItem>
+            <section className="flex flex-col gap-4 p-2">
               {/* Nombre */}
-              <FormField
-                control={form.control}
-                name="firstName"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Nombre</FormLabel>
-                    <FormControl>
-                      <input
-                        className="border p-2 rounded-md relative "
-                        placeholder="Juan"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage></FormMessage>
-                  </FormItem>
-                )}
-              />
+              <TextInput form={form} name="firstName" label="Nombre" placeholder="Juan"/>
               {/* Apellido */}
-              <FormField
-                control={form.control}
-                name="lastName"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Apellido</FormLabel>
-                    <FormControl>
-                      <input
-                        className="border p-2 rounded-md"
-                        placeholder="Pérez"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage></FormMessage>
-                  </FormItem>
-                )}
-              />
+              <TextInput form={form} name="lastName" label="Apellido" placeholder="Perez"/>
               {/* Email */}
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Email</FormLabel>
-                    <FormControl>
-                      <input
-                        className="border p-2 rounded-md"
-                        placeholder="correo@ejemplo.com"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage></FormMessage>
-                  </FormItem>
-                )}
-              />
-            </section>
-            <section className="flex flex-col gap-4">
-              {/* Carta de presentación */}
-              <FormField
-                control={form.control}
-                name="coverLetter"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Carta de presentación (opcional)</FormLabel>
-                    <FormControl>
-                      <Textarea
-                        className="h-40 rounded-md resize-none"
-                        placeholder="Escribir carta..."
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage></FormMessage>
-                    <span
-                      style={{
-                        color:
-                          Number(`${field.value?.length}`) <= 250
-                            ? "darkgreen"
-                            : "red",
-                      }}
-                      className="absolute mt-38 right-8"
-                    >
-                      {field.value?.length} / 250
-                    </span>
-                  </FormItem>
-                )}
-              />
+              <TextInput form={form} name="email" label="Email" placeholder="correo@ejemplo.com"/>
+
               <FormField
                 control={form.control}
                 name="heardFrom"
@@ -202,6 +130,29 @@ export const JoinUsForm = ({ children }: JoinUsFormProps) => {
                         ))}
                       </select>
                     </FormControl>
+                  </FormItem>
+                )}
+              />
+            </section>
+            </CarouselItem>
+            ,
+            <CarouselItem>
+            <section className="flex flex-col gap-4">
+              {/* Carta de presentación */}
+              <FormField
+                control={form.control}
+                name="coverLetter"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Carta de presentación (opcional)</FormLabel>
+                    <FormControl>
+                      <Textarea
+                        className="h-40 rounded-md resize-none"
+                        placeholder="Escribir carta..."
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage></FormMessage>
                   </FormItem>
                 )}
               />
@@ -227,7 +178,7 @@ export const JoinUsForm = ({ children }: JoinUsFormProps) => {
                   </FormItem>
                 )}
               />
-
+              
               <button
                 type="submit"
                 className="bg-blue-600 text-white p-2 rounded-md"
@@ -235,6 +186,10 @@ export const JoinUsForm = ({ children }: JoinUsFormProps) => {
                 Enviar
               </button>
             </section>
+            </CarouselItem>
+            
+            </CarouselForm>
+
           </form>
         </Form>
       </DialogContent>

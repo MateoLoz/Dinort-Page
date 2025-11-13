@@ -1,8 +1,10 @@
+import CarouselForm from "@/components/custom/Carousel/CarouselForm";
 import { getDictionary } from "../i18n/dictionary";
 
 import Divider from "@/components/custom/Divider/Divider";
 import Footer from "@/components/custom/Footer/Footer";
 import Sections from "@/components/custom/Sections/Section";
+import { CarouselItem } from "@/components/ui/carousel";
 
 export default async function Home({params}: {params: Promise<{ lang: string}>}) {
 

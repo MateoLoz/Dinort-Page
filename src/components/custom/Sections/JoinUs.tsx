@@ -9,15 +9,15 @@ type JoinUsProps = {
 
 const JoinUs = ({ title, description, btntitle }: JoinUsProps) => {
   return (
-    <div className="w-full md:pt-12 pb-36 pt-6 flex flex-col items-center justify-center gap-4">
+    <div className="w-full md:pt-12 lg:pb-36 md:pb-24 pb-12  pt-6 flex flex-col items-center justify-center gap-4">
       <h2 className="font-main font-medium uppercase lg:text-[50px] md:text-[40px] text-[25px]">
         {title}
       </h2>
-      <span className="font-main font-light text-gray-3">{description}</span>
+      <span className="font-main font-light text-center px-8 sm:px-0 text-gray-3 md:text-s lg:text-md">{description}</span>
       <JoinUsForm>
-        <button className="bg-contact text-white p-4 rounded-3xl flex flex-row gap-2 hover:scale-[1.02] transition hover:bg-card-3">
+        <button className="bg-contact text-white md:text-md text-s md:p-4 p-3 rounded-3xl flex flex-row gap-2 hover:scale-[1.02] transition hover:bg-card-3">
           {btntitle}
-          <LightArrow width={22} height={22} />
+          <LightArrow  width={22} height={22} />
         </button>
       </JoinUsForm>
     </div>

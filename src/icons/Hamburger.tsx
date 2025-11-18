@@ -1,15 +1,22 @@
-import { motion } from "motion/react";
+import "../app/globals.css";
 
-import '../app/globals.css';
+type HamburgerProps = {
+  setMenu: React.Dispatch<React.SetStateAction<boolean>>;
+  menu: boolean;
+};
 
-const Hamburger = () => {
-    return(
-        <motion.div className="p-2">
-           <div className="hamburger-menu">
-             <input type="checkbox" />
-           </div>
-        </motion.div>
-    )
-}
+const Hamburger = ({ setMenu, menu }: HamburgerProps) => {
+  return (
+    <>
+      <label className="hamburger-menu">
+        <input
+          type="checkbox"
+          className="peer"
+          onClick={() => setMenu(!menu)}
+        />
+      </label>
+    </>
+  );
+};
 
 export default Hamburger;

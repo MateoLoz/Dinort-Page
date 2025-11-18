@@ -62,10 +62,10 @@ const MobileNavBar = ({ navbar }: navbarProps) => {
           px-2 pb-2 w-full flex flex-col justify-center items-center gap-2
         `}
       >
-        <li className="w-full font-main font-normal text-center text-gray-400 p-2 border-b">{navbar.clients}</li>
-        <li className="w-full font-main font-normal text-center text-gray-400 p-2 border-b">{navbar.products}</li>
-        <li className="w-full font-main font-normal text-center text-gray-400 p-2 border-b">{navbar.aboutUs}</li>
-        <li className="w-full font-main font-normal text-center text-gray-400 p-2">{navbar.contactUs}</li>
+        <li className="w-full font-main font-normal text-center text-gray-200 active:text-white p-2 border-b">{navbar.clients}</li>
+        <li className="w-full font-main font-normal text-center text-gray-200 active:text-white p-2 border-b">{navbar.products}</li>
+        <li className="w-full font-main font-normal text-center text-gray-200 active:text-white p-2 border-b">{navbar.aboutUs}</li>
+        <li className="w-full font-main font-normal text-center text-gray-200 active:text-white p-2">{navbar.contactUs}</li>
       </ul>
     </div>
   );

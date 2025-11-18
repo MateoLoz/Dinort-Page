@@ -20,16 +20,16 @@ export const FooterNavegation = ({
         {title}
       </h2>
       <ul className="flex flex-col gap-1">
-        <li className="text-gray-2 font-main font-light text-[12px] md:text-[14px]">
+        <li className="text-gray-2 transition-colors hover:text-white ease font-main font-light text-[12px] md:text-[14px]">
           {navegation_section.clients}
         </li>
-        <li className="text-gray-2 font-main font-light text-[12px] md:text-[14px]">
+        <li className="text-gray-2 transition-colors hover:text-white ease font-main font-light text-[12px] md:text-[14px]">
           {navegation_section.products}
         </li>
-        <li className="text-gray-2 font-main font-light text-[12px] md:text-[14px]">
+        <li className="text-gray-2 transition-colors hover:text-white ease font-main font-light text-[12px] md:text-[14px]">
           {navegation_section.companys}
         </li>
-        <li className="text-gray-2 font-main font-light text-[12px] md:text-[14px]">
+        <li className="text-gray-2 transition-colors hover:text-white ease font-main font-light text-[12px] md:text-[14px]">
           {navegation_section.about_us}
         </li>
       </ul>
@@ -54,7 +54,7 @@ export const FooterPolitics = ({
         {title}
       </h2>
       <ul className="flex flex-col gap-1">
-        <li className="text-gray-2 font-main font-light font-normal text-[12px] md:text-[14px]">
+        <li className="text-gray-2 font-main transition-colors hover:text-white ease font-normal text-[12px] md:text-[14px]">
           {politics_section.politics}
         </li>
       </ul>
@@ -78,15 +78,15 @@ export const FooterSocial = ({ title, socials_section }: FooterSocialProps) => {
         {title}
       </h2>
       <ul className="flex flex-col gap-1 md:justify-start ">
-        <li className="text-gray-2 font-main font-light font-normal text-[12px] md:text-[14px] flex flex-row items-center gap-1">
+        <li className="text-gray-2 font-main transition-colors hover:text-white ease font-normal text-[12px] md:text-[14px] flex flex-row items-center gap-1">
           {socials_section.wpp}
           <LightArrow width={12} height={12} transform="rotate(-45)" />
         </li>
-        <li className="text-gray-2 font-main font-light font-normal text-[12px] md:text-[14px] flex flex-row items-center gap-1">
+        <li className="text-gray-2 font-main transition-colors hover:text-white ease font-normal text-[12px] md:text-[14px] flex flex-row items-center gap-1">
           {socials_section.lnk}
           <LightArrow width={12} height={12} transform="rotate(-45)" />
         </li>
-        <li className="text-gray-2 font-main font-light font-normal text-[12px] md:text-[14px] flex flex-row items-center gap-1">
+        <li className="text-gray-2 font-main transition-colors hover:text-white ease font-normal text-[12px] md:text-[14px] flex flex-row items-center gap-1">
           {socials_section.ig}
           <LightArrow width={12} height={12} transform="rotate(-45)" />
         </li>

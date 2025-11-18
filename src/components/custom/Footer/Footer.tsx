@@ -36,7 +36,7 @@ type FooterProps = {
 const Footer = ({ footer }: FooterProps) => {
   return (
     <footer className="w-full rounded-md h-auto bg-footer md:px-8 px-4 py-4 flex flex-col gap-2">
-      <aside className="h-auto md:min-h-[45vh] pb-6 flex md:flex-row flex-col justify-between gap-[15px] ">
+      <aside className="h-auto md:min-h-[55vh] pb-6 flex md:flex-row flex-col justify-between gap-[15px] ">
         <FooterSection.header
           brand={footer.headers.brand}
           location={footer.brand_section.location}

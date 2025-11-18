@@ -22,7 +22,7 @@ const MachineTagSection = ({ lang }: MachineTagProps) => {
 
   if (isLoading) {
     return (
-      <div className="pl-4 w-full grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-[15px] justify-center pt-12 pb-12">
+      <div className="lg:px-36 md:px-12 px-4 w-full grid  grid-cols-[repeat(auto-fit,minmax(120px,1fr))] sm:grid-cols-[repeat(auto-fit,minmax(160px,1fr))]  md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] lg:grid-cols-[repeat(auto-fit,minmax(330px,1fr))] lg:gap-[10px] md:gap-[8px] gap-[6px] place-center items-center justify-center lg:py:24 py-0 lg:mb-24 mb-6">
         <Tag.skeleton />
         <Tag.skeleton />
         <Tag.skeleton />

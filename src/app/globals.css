@@ -282,7 +282,6 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
-  margin-right: 4px;
 }
 
 .hamburger-menu::after,
@@ -292,12 +291,31 @@
   width: 24px;
   height: 3px;
   background: white;
+  transform-origin: right center;
+  transition: ease-out opacity 300ms, width ease-out 300ms,
+    rotate ease-out 300ms;
+  z-index: 10;
 }
 
 .hamburger-menu input {
+  background-color: white;
+  pointer-events: none;
   appearance: none;
   padding: 0;
+  outline: none;
   margin: 0;
+}
+
+.hamburger-menu:has(input:checked)::before {
+  rotate: -45deg;
+}
+
+.hamburger-menu input:checked {
+  opacity: 0;
+}
+
+.hamburger-menu:has(input:checked)::after {
+  rotate: 45deg;
 }
 
 .dark {

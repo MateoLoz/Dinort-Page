@@ -8,13 +8,13 @@ export const MachineCardSkeleton = () => {
         <Skeleton className="xl:w-[240px] xl:h-[180px] md:w-[200px] h-[150px]  w-[180px] h-[130px]"/>
         </figure>
         <section className="w-full lg:px-4 px-2">
-        <Skeleton className="w-full h-4"/>
+        <Skeleton className="w-[40vw] h-8 bg-gray-600"/>
         </section>
-        <aside className="w-full lg:px-4 px-2">
-        <Skeleton className="w-full h-4"/>
-        <Skeleton className="w-full h-4"/>
-        <Skeleton className="w-full h-4"/>
-        <Skeleton className="w-full h-4"/>
+        <aside className="w-full flex flex-col gap-2 lg:px-4 px-2">
+        <Skeleton className="w-full h-4 bg-gray-400"/>
+        <Skeleton className="w-[80vw] h-4 bg-gray-400"/>
+        <Skeleton className="w-[70vw] h-4 bg-gray-400"/>
+        <Skeleton className="w-[50vw] h-4 bg-gray-400"/>
         </aside>
     </article>
     )

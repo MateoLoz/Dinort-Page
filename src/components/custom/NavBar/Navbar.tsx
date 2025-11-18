@@ -3,7 +3,7 @@
 import Anchor from "../Link/Anchor";
 import Button from "../Button/Button";
 import Hamburger from "@/icons/Hamburger";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 type navbarProps = {
   navbar: {
@@ -43,26 +43,29 @@ export function DesktopNavBar({ navbar }: navbarProps) {
 const MobileNavBar = ({ navbar }: navbarProps) => {
   const [menu, setMenu] = useState(false);
 
+
+
   return (
-    <div className="box-border mx-4 z-10 inset-x-0 min-h-16 fixed top-6 flex flex-col gap-2 justify-center items-center  bg-blend-mode-difference bg-[rgba(0,30,65,0.47)] rounded-md shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-md border border-[rgba(0,30,65,0.3)] transition-height ease-in-out">
+    <div className="overflow-hidden box-border mx-4 z-10 inset-x-0 min-h-10 fixed top-6 flex flex-col gap-2 justify-center items-center  bg-blend-mode-difference bg-[rgba(0,30,65,0.47)] rounded-md shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-md border border-[rgba(0,30,65,0.3)] transition-height ease-in-out">
       <header
-        className={`w-full h-auto fixed top-2 px-2 flex items-center justify-end`}
+        className={`w-full h-8 px-2 pt-4 flex items-center justify-end`}
       >
         <Hamburger setMenu={setMenu} menu={menu} />
       </header>
 
       <ul
         className={`
-    overflow-hidden
-    transition-all duration-300
-    ${menu ? "max-h-96 opacity-100" : "max-h-0 opacity-0 translate-3"}
-    px-2 pb-2 w-full flex flex-col justify-center items-center gap-2
-  `}
+          relative top-0
+          overflow-hidden
+          transition-all duration-300
+          ${menu ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
+          px-2 pb-2 w-full flex flex-col justify-center items-center gap-2
+        `}
       >
-        <li className="w-full text-center p-2 border-b">{navbar.clients}</li>
-        <li className="w-full text-center p-2 border-b">{navbar.products}</li>
-        <li className="w-full text-center p-2 border-b">{navbar.aboutUs}</li>
-        <li className="w-full text-center p-2">{navbar.contactUs}</li>
+        <li className="w-full font-main font-normal text-center text-gray-400 p-2 border-b">{navbar.clients}</li>
+        <li className="w-full font-main font-normal text-center text-gray-400 p-2 border-b">{navbar.products}</li>
+        <li className="w-full font-main font-normal text-center text-gray-400 p-2 border-b">{navbar.aboutUs}</li>
+        <li className="w-full font-main font-normal text-center text-gray-400 p-2">{navbar.contactUs}</li>
       </ul>
     </div>
   );

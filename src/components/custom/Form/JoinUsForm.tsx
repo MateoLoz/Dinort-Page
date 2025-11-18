@@ -1,7 +1,7 @@
 "use client";
 
 import { useForm } from "react-hook-form";
-import { z } from "zod";
+import { string, z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Dialog,
@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/dialog";
 
 import CarouselForm from "../Carousel/CarouselForm";
-import { CarouselNext } from "@/components/ui/carousel";
+
 import {
   Form,
   FormControl,
@@ -21,9 +21,13 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+
 import { Textarea } from "@/components/ui/textarea";
 import { CarouselItem } from "@/components/ui/carousel";
 import TextInput from "./Inputs/TextInput";
+import { postCandidates } from "@/server/candidates";
+import { useState } from "react";
+
 
 const sourceEnum = z.enum([
   "LinkedIn",
@@ -75,6 +79,9 @@ interface JoinUsFormProps {
 }
 
 export const JoinUsForm = ({ children }: JoinUsFormProps) => {
+
+  const [btn,setBtn] = useState('Enviar');
+
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -83,12 +90,31 @@ export const JoinUsForm = ({ children }: JoinUsFormProps) => {
       email: "",
       coverLetter: "",
     },
-  });
+   }
+);
 
-  console.log(form);
+  const onSubmit = async (values: FormValues) => {
 
-  const onSubmit = (values: FormValues) => {
-    console.log("Formulario enviado ✅", values);
+    setBtn('Enviando..');
+
+   const formData = new FormData();
+   formData.append('firstName',values.firstName);
+   formData.append('lastName',values.lastName);
+   formData.append('email',values.email);
+   formData.append('heardFrom', values.heardFrom);
+   formData.append('cv', values.Curriculum);
+  if(values.coverLetter) formData.append('coverLetter', values.coverLetter)
+  const response = await postCandidates(formData);
+  if(response == 201) {
+    setBtn('Enviado con exito!');
+    form.reset();
+    form.resetField("Curriculum");
+    form.resetField("heardFrom");
+  }
+  if(response != 201) {
+    setBtn('Error algo salio mal!');
+  }
+
   };
 
   return (
@@ -178,12 +204,14 @@ export const JoinUsForm = ({ children }: JoinUsFormProps) => {
                   </FormItem>
                 )}
               />
-              
+
               <button
                 type="submit"
                 className="bg-blue-600 text-white p-2 rounded-md"
+                style={{background: form.formState.isSubmitting ? 'lightblue' : '' }}
+                disabled={form.formState.isSubmitting}
               >
-                Enviar
+               {btn}
               </button>
             </section>
             </CarouselItem>

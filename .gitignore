@@ -39,3 +39,149 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+
+        <Form {...form}>
+          <form
+            className="flex flex-row gap-4 my-4"
+            onSubmit={form.handleSubmit(onSubmit)}
+          >
+            ,
+            <section className="flex flex-col gap-4">
+              {/* Nombre */}
+              <FormField
+                control={form.control}
+                name="firstName"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Nombre</FormLabel>
+                    <FormControl>
+                      <input
+                        className="border p-2 rounded-md relative "
+                        placeholder="Juan"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage></FormMessage>
+                  </FormItem>
+                )}
+              />
+              {/* Apellido */}
+              <FormField
+                control={form.control}
+                name="lastName"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Apellido</FormLabel>
+                    <FormControl>
+                      <input
+                        className="border p-2 rounded-md"
+                        placeholder="Pérez"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage></FormMessage>
+                  </FormItem>
+                )}
+              />
+              {/* Email */}
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Email</FormLabel>
+                    <FormControl>
+                      <input
+                        className="border p-2 rounded-md"
+                        placeholder="correo@ejemplo.com"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage></FormMessage>
+                  </FormItem>
+                )}
+              />
+            </section>
+            <section className="flex flex-col gap-4">
+              {/* Carta de presentación */}
+              <FormField
+                control={form.control}
+                name="coverLetter"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Carta de presentación (opcional)</FormLabel>
+                    <FormControl>
+                      <Textarea
+                        className="h-40 rounded-md resize-none"
+                        placeholder="Escribir carta..."
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage></FormMessage>
+                    <span
+                      style={{
+                        color:
+                          Number(`${field.value?.length}`) <= 250
+                            ? "darkgreen"
+                            : "red",
+                      }}
+                      className="absolute mt-38 right-8"
+                    >
+                      {field.value?.length} / 250
+                    </span>
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="heardFrom"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>¿Dónde nos escuchaste?</FormLabel>
+                    <FormControl>
+                      <select {...field} className="border p-2 rounded-md">
+                        <option value="">Selecciona una opción</option>
+                        {sourceEnum.options.map((option) => (
+                          <option key={option} value={option}>
+                            {option}
+                          </option>
+                        ))}
+                      </select>
+                    </FormControl>
+                  </FormItem>
+                )}
+              />
+              {/* Curriculum */}
+              <FormField
+                control={form.control}
+                name="Curriculum"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Currículum</FormLabel>
+                    <FormControl>
+                      <input
+                        type="file"
+                        className="border p-2 rounded-md overflow overflow-auto"
+                        placeholder="Ingresar Cv"
+                        onChange={(e) => {
+                          const file = e.target.files?.[0];
+                          if (file) field.onChange(file);
+                        }}
+                      />
+                    </FormControl>
+                    <FormMessage></FormMessage>
+                  </FormItem>
+                )}
+              />
+
+              <button
+                type="submit"
+                className="bg-blue-600 text-white p-2 rounded-md"
+              >
+                Enviar
+              </button>
+            </section>
+          </form>
+        </Form>

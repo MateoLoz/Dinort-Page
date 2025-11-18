@@ -25,6 +25,15 @@
             "contact-us":"Contact-us",
             "join-us":"Join Dinort"
         },
+        "contacts":{
+            "title":"Get in touch",           
+            "btntitle":"Schedule an Appointment"
+        },
+        "join":{
+            "title":"Work with us",
+            "description":"Join a team passionate about innovation and growth",
+            "btntitle":"Contact us"
+        },
         "accordion":{
             "headers":{
                 "item-1":"Best cost/benefit ratio",

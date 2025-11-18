@@ -1,7 +1,7 @@
 import FlipLink from "./FlipLink";
 
 const Anchor = {
-    flip:FlipLink
-}
+  flip: FlipLink,
+};
 
 export default Anchor;

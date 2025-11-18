@@ -11,8 +11,9 @@ function Banner({ bannerSmall }: BannerProps) {
   return (
     <div className=" z-0 rounded-xl bg-[var(--bannerPrimaryBackground)] w-full h-[90vh] flex flex-col gap-4 justify-center items-center">
       <Image
-        className="z-0 flex justify-center items-center"
+        className="z-0 flex justify-center items-center px-16 md:px-4 lg:px-0"
         width={400}
+        loading="lazy"
         src={logo}
         alt="Dinort Mecanizados S.A.S logo"
       />

@@ -12,7 +12,7 @@ const ContactUs = ({ title, href, btntitle }: ContactProps) => {
       <h2 className="inline-block overflow-hidden font-main font-medium uppercase lg:text-[70px] md:text-[45px] text-[25px] no-wrap">
         {title}
       </h2>
-      <button className="bg-contact md:p-4 p-2 rounded-3xl flex flex-row gap-2 items-center text-white hover:scale-[1.02] transition hover:bg-card-3">
+      <button className="bg-contact md:p-4 p-3 rounded-3xl flex flex-row gap-2 items-center text-white hover:scale-[1.02] transition hover:bg-card-3">
         {btntitle}
         <LightArrow width={24} height={24} />
       </button>

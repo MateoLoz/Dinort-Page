@@ -49,7 +49,7 @@ export default function Work ({title} : WorkProps) {
     }
 
     return(
-        <div ref={scope} className="w-full h-full flex flex-col gap-2 sm:py-12 py-6">
+        <div id='product' ref={scope} className="w-full h-full flex flex-col gap-2 sm:py-12 py-6">
          <header className='flex flex-row gap-2 items-center md:pb-12 pb-6 pl-4'>
             <h2 className="xl:text-[40px] text-2xl sm:text-3xl font-s font-normal">{title}</h2>
             <ArrowAlt className='lg:w-[40px] lg:h-[40px] md:w-[36px] md:h-[36px] w-[32px] h-[32px]' fill='#000'/>

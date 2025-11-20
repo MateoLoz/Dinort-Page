@@ -27,7 +27,7 @@ export function DesktopNavBar({ navbar }: navbarProps) {
             <Anchor.flip href="#product">{navbar.products}</Anchor.flip>
           </li>
           <li className="inline-block overflow-hidden">
-            <Anchor.flip href="#about">{navbar.aboutUs}</Anchor.flip>
+            <Anchor.flip href="#about-us">{navbar.aboutUs}</Anchor.flip>
           </li>
         </ul>
         <ul className="xl:w-[10%] w-[27%] flex items-center  justify-end md:mr-4">
@@ -62,9 +62,9 @@ const MobileNavBar = ({ navbar }: navbarProps) => {
           px-2 pb-2 w-full flex flex-col justify-center items-center gap-2
         `}
       >
-        <li className="w-full font-main font-normal text-center text-gray-200 active:text-white p-2 border-b">{navbar.clients}</li>
-        <li className="w-full font-main font-normal text-center text-gray-200 active:text-white p-2 border-b">{navbar.products}</li>
-        <li className="w-full font-main font-normal text-center text-gray-200 active:text-white p-2 border-b">{navbar.aboutUs}</li>
+        <li  className="w-full font-main font-normal text-center text-gray-200 active:text-white p-2 border-b"> <a href="#clients">{navbar.clients}</a></li>
+        <li className="w-full font-main font-normal text-center text-gray-200 active:text-white p-2 border-b"> <a href="#product">{navbar.products}</a></li>
+        <li className="w-full font-main font-normal text-center text-gray-200 active:text-white p-2 border-b"> <a href="#about-us"> {navbar.aboutUs}</a></li>
         <li className="w-full font-main font-normal text-center text-gray-200 active:text-white p-2">{navbar.contactUs}</li>
       </ul>
     </div>

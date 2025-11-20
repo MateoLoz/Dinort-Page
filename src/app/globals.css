@@ -153,6 +153,10 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 .carousel {
   display: flex;
   flex-direction: row;

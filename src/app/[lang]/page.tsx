@@ -15,7 +15,7 @@ export default async function Home({
   const t = await (await getDictionary(lang)).homepage;
 
   return (
-    <div className="p-m sm:p-xs flex flex-col gap-4 ">
+    <div className="p-m sm:p-xs flex flex-col gap-4">
       <Sections.Hero bannerSmall={t.navbar.bannerSmall} />
       <Sections.navbar navbar={t.navbar} />
       <Sections.banner title={t.section.title} subtitle={t.section.subtitle} />

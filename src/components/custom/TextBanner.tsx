@@ -10,7 +10,8 @@ type TextBannerProps = {
 export default function TextBanner ({title, subtitle}: TextBannerProps) {
 
     return(
-<motion.div 
+<motion.div
+id="clients"
   className="w-full h-auto sm:py-24 py-16  flex flex-col gap-2 justify-center items-center"
 >
   

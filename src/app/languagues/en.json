@@ -76,5 +76,24 @@
                 "back_top":"back to top"
             }
         }
+    },
+    "contactpage":{
+        "banner":{
+            "title":"We transform your ideas into pieces",
+            "subtitle":"Fill out the form and speak with a Dinort advisor today."
+        },
+        "contact_form":{
+            "name_label":"Name",
+            "name_placeholder":"John",
+            "lastname_label":"Last Name",
+            "lastname_placeholder":"Doe",
+            "email_label":"Email",
+            "email_placeholder":"example@gamil.com",
+            "phone_label":"Phone Number",
+            "phone_placeholder":"(000) 000-000",
+            "message_label":"Message",
+            "message_placeholder":"How can we help?",
+            "how_heard_label":"where do you heard about us?"
+        }
     }
 }

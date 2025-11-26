@@ -76,5 +76,24 @@
                 "back_top":"Voltar ao início"
             }
         }
+    },
+    "contactpage":{
+        "banner":{
+            "title":"Transformamos suas ideias em peças",
+            "subtitle":"Preencha o formulário e fale hoje mesmo com um consultor da Dinort."
+        },
+        "contact_form":{
+            "name_label":"nome",
+            "name_placeholder":"Juan",
+            "lastname_label":"Sobrenome",
+            "lastname_placeholder":"Perez",
+            "email_label":"Email",
+            "email_placeholder":"correio@gamil.com",
+            "phone_label":"Numero",
+            "phone_placeholder":"(000) 000-000",
+            "message_label":"Mensagem",
+            "message_placeholder":"Como podemos ajudar?",
+            "how_heard_label":"Onde posso ouvir sobre nós?"
+        }
     }
 }

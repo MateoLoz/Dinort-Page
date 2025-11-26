@@ -1,10 +1,8 @@
-import CarouselForm from "@/components/custom/Carousel/CarouselForm";
 import { getDictionary } from "../i18n/dictionary";
 
 import Divider from "@/components/custom/Divider/Divider";
 import Footer from "@/components/custom/Footer/Footer";
 import Sections from "@/components/custom/Sections/Section";
-import { CarouselItem } from "@/components/ui/carousel";
 
 export default async function Home({
   params,
@@ -17,7 +15,7 @@ export default async function Home({
   return (
     <div className="p-m sm:p-xs flex flex-col gap-4">
       <Sections.Hero bannerSmall={t.navbar.bannerSmall} />
-      <Sections.navbar navbar={t.navbar} />
+      <Sections.navbar lang={t.lang} navbar={t.navbar} />
       <Sections.banner title={t.section.title} subtitle={t.section.subtitle} />
       <Divider.right title={t.dividers.companys} alignment={"start"} />
       <Sections.slider />

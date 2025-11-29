@@ -26,12 +26,12 @@ export default function Mision({ lang, misionheader }: MisionProps) {
           </span>
         </header>
         <section className="w-full self-center flex-col gap-4 flex justify-center items-center">
-          <div className="w-full xl:pl-36 xl:pr-36 pl-4 pr-4 xl:pt-8 xl:pb-8 pt-4 pb-4 flex flex-col md:gap-8 gap-4">
+          <div className="w-full xl:pl-36 xl:pr-36 pl-4 pr-4 xl:pt-8 xl:pb-8 pt-4 pb-4 flex flex-col justify-center items-center md:gap-8 gap-4">
             <Skeleton className="h-8 w-full bg-black" />
-            <Skeleton className="h-8 w-full bg-black" />
-            <Skeleton className="h-8 w-full bg-black" />
+            <Skeleton className="h-8 w-[80%] bg-black" />
+            <Skeleton className="h-8 w-[65%] bg-black" />
           </div>
-          <aside className="w-full flex sm:flex-row flex-col gap-4 justify-center items-center">
+          <aside className="w-full flex flex-row  gap-4 justify-center items-center">
             <Card.expSkeleton />
             <Card.expSkeleton />
           </aside>

@@ -36,6 +36,7 @@ export default async function Home({
       <Sections.tag lang={lang} />
       <Divider.primary title={t.dividers["contact-us"]} alignment="center" />
       <Sections.contact
+      href={`${t.lang}/contact`}
         title={t.contacts["title"]}
         btntitle={t.contacts["btntitle"]}
       />

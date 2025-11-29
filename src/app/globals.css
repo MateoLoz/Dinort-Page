@@ -278,6 +278,11 @@
   }
 }
 
+.cursor{
+  background-color: #000;
+  mix-blend-mode: difference;
+}
+
 @keyframes slide {
   from {
     translate: 0;

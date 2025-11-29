@@ -28,7 +28,6 @@ type FooterProps = {
     };
     rights_section: {
       rights: string;
-      back_top: string;
     };
   };
 };
@@ -57,7 +56,7 @@ const Footer = ({ footer }: FooterProps) => {
           />
         </section>
       </aside>
-      <FooterSection.bottom />
+      <FooterSection.bottom title={footer.rights_section.rights}/>
     </footer>
   );
 };

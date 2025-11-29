@@ -1,8 +1,9 @@
 import { LightArrow } from "@/icons/LightArrow";
+import Link from "next/link";
 
 type ContactProps = {
   title: string;
-  href?: string;
+  href: string;
   btntitle: string;
 };
 
@@ -13,8 +14,11 @@ const ContactUs = ({ title, href, btntitle }: ContactProps) => {
         {title}
       </h2>
       <button className="bg-contact md:p-4 p-3 rounded-3xl flex flex-row gap-2 items-center text-white hover:scale-[1.02] transition hover:bg-card-3">
+        <Link className="w-full flex flex-row gap-2" href={href}>
         {btntitle}
         <LightArrow width={24} height={24} />
+        </Link>
+      
       </button>
     </div>
   );

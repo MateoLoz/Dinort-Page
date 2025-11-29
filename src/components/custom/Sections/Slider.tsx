@@ -4,7 +4,7 @@ import "../../../app/globals.css";
 import { useQuery } from "@tanstack/react-query";
 import { getHero } from "@/server/hero";
 import Image from "next/image";
-
+import SliderSkeleton from "../Skeletons/Slider/Slider.skeleton";
 type CompanysHero = {
   name: string;
   ClientLogo: string;
@@ -16,7 +16,13 @@ export function Companys() {
     queryFn: getHero,
   });
 
-  if (isLoading) return <h2>Cargando..</h2>;
+  if (isLoading) {
+    return(
+      <SliderSkeleton/>
+    )
+  }
+
+  
 
   if (error) throw new Error(error.message);
 

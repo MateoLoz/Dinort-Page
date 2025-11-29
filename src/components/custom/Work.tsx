@@ -54,8 +54,7 @@ export default function Work ({title} : WorkProps) {
             <h2 className="xl:text-[40px] text-2xl sm:text-3xl font-s font-normal">{title}</h2>
             <ArrowAlt className='lg:w-[40px] lg:h-[40px] md:w-[36px] md:h-[36px] w-[32px] h-[32px]' fill='#000'/>
          </header>
-         <aside onMouseEnter={EnterCursor} onMouseMove={handleMove} onMouseLeave={leaveCursor} className="work-layout">
-            <Cursor/>
+         <aside className="work-layout">
            <div className='cursor-none bg-footer rounded-lg' style={{gridArea:'box-1'}}>1</div>
            <div className='cursor-none bg-footer rounded-lg' style={{gridArea:'box-2'}}>2</div>
            <div className='cursor-none bg-footer rounded-lg' style={{gridArea:'box-3'}}>3</div>

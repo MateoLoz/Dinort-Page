@@ -8,7 +8,7 @@ import Help from "./Help";
 import Machines from "./Machines";
 import MachineTagSection from "./TagSection";
 import NavBar from "../NavBar/Navbar";
-import ContactUs from "./ContacUs";
+import ContactUs from "./ContactUs";
 import JoinUs from "./JoinUs";
 
 const Sections = {

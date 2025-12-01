@@ -58,9 +58,9 @@ export default function Mision({ lang, misionheader }: MisionProps) {
           {`"${data?.mision}"`}
         </motion.p>
         <motion.aside 
-         initial={{ y: "60%", opacity: 0 }} 
+         initial={{ y: "30%", opacity: 0 }} 
          whileInView={{ y: 0, opacity: 1 }}     
-         transition={{ duration: 0.40, ease: "easeOut"}}
+         transition={{ duration: 0.50, ease: "easeOut"}}
         className="overflow-hidden w-full flex flex-row  gap-4 justify-center items-center"
         >
           <Card.experience

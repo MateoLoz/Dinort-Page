@@ -41,7 +41,7 @@ const Footer = ({ footer }: FooterProps) => {
           location={footer.brand_section.location}
           email={footer.brand_section.email}
         />
-        <section className="flex flex-row gap-8 md:gap-12 pt-6 md:pt-0">
+        <section className="flex flex-row gap-4 sm:gap-8 md:gap-12 pt-6 md:pt-0">
           <FooterSection.navegation
             title={footer.headers.navegation}
             navegation_section={footer.navegation_section}

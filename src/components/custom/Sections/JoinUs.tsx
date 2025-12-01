@@ -13,7 +13,7 @@ type JoinUsProps = {
 
 const JoinUs = ({ title, description, btntitle }: JoinUsProps) => {
   return (
-    <div className="w-full md:pt-12 lg:pb-36 md:pb-24 pb-12  pt-6 flex flex-col items-center justify-center gap-4">
+    <div className="w-full md:pt-12 lg:pb-36 pb-24 pt-12 flex flex-col items-center justify-center gap-4">
       
       <section className="overflow-hidden">
       <motion.h2 
@@ -26,12 +26,12 @@ const JoinUs = ({ title, description, btntitle }: JoinUsProps) => {
       </motion.h2>
       </section>
       
-      <section className="overflow-hidden">
+      <section className="overflow-hidden px-8 sm:px-0 text-center">
       <motion.span 
       initial={{ y: "100%", opacity: 0 }} 
       whileInView={{ y: 0, opacity: 1 }}     
       transition={{ duration: 0.45, ease: "easeOut"}}
-      className="font-main font-light text-center px-8 sm:px-0 text-gray-3 md:text-s lg:text-md"
+      className="font-main font-light text-center text-gray-3 md:text-s lg:text-md"
       >
       {description}
       </motion.span>
@@ -44,7 +44,7 @@ const JoinUs = ({ title, description, btntitle }: JoinUsProps) => {
          transition={{ duration: 0.60, ease: "easeOut"}}
          className="overflow-hidden"
         >
-         <button className="bg-contact text-white md:text-md text-s md:p-4 p-3 rounded-3xl flex flex-row gap-2 hover:scale-[1.02] transition hover:bg-card-3">
+         <button className="bg-contact text-white sm:text-md md:text-md text-sm md:p-4 p-2 rounded-3xl flex flex-row justify-center items-center gap-2 hover:scale-[1.02] transition hover:bg-card-3">
           {btntitle}
           <LightArrow  width={22} height={22} />
         </button>

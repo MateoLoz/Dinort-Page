@@ -20,7 +20,7 @@ const ContactUs = ({ title, href, btntitle }: ContactProps) => {
           initial={{ y: "100%", opacity: 0 }} 
           whileInView={{ y: 0, opacity: 1 }}     
           transition={{ duration: 0.40, ease: "easeOut"}}
-      className="inline-block font-main font-medium uppercase lg:text-[70px] md:text-[45px] sm:text-[30px] text-[25px] no-wrap"
+      className="inline-block font-main font-medium uppercase lg:text-[70px] md:text-[45px] sm:text-[35px] text-[28px] no-wrap"
       >
         {title}
       </motion.h2>
@@ -32,8 +32,8 @@ const ContactUs = ({ title, href, btntitle }: ContactProps) => {
        transition={{ duration: 0.70, ease: "easeOut"}}
       className="overflow-hidden"
       >
-       <button className="bg-contact md:p-4 p-3 rounded-3xl flex flex-row gap-2 items-center text-white hover:scale-[1.02] transition hover:bg-card-3">
-        <Link className="w-full flex flex-row gap-2" href={href}>
+       <button className="bg-contact md:p-4 p-2  rounded-3xl flex flex-row gap-2 items-center text-white hover:scale-[1.02] transition hover:bg-card-3">
+        <Link className="w-full flex flex-row justify-center items-center gap-2  sm:text-md md:text-md text-sm" href={href}>
         {btntitle}
         <LightArrow width={24} height={24} />
         </Link>

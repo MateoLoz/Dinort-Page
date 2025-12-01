@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { about } from "@/server/about";
 import { ParagraphSkeleton } from "../Skeletons/Paragraph/Parapraph.skeleton";
 import { Paragraph } from "../Paragraph/Paragraph";
+import { motion } from 'motion/react';
 
 type AboutUsProps = {
   we: string;
@@ -32,16 +33,30 @@ export default function AboutUs({
         <header className="w-full h-12 flex justify-center items-center">
           <h2 className="text-[#828282] text-md uppercase">{aboutus}</h2>
         </header>
-        <aside className="w-full flex flex-col gap-2">
-          <h2 className="text-background font-main font-medium lg:text-[33px] text-lg">
+        <aside className="overflow-hidden w-full flex flex-col gap-2">
+        <section className="overflow-hidden">
+        <motion.h2 
+           initial={{ y: "100%", opacity: 0 }} 
+           whileInView={{ y: 0, opacity: 1 }}     
+           transition={{ duration: 0.40, ease: "easeOut"}}
+          className="text-background font-main font-medium lg:text-[33px] text-lg"
+          >
             {we}
-          </h2>
+          </motion.h2>
+          </section>
           <ParagraphSkeleton.about />
         </aside>
-        <aside className="w-full flex flex-col gap-2">
-          <h2 className="text-background font-main font-medium lg:text-[33px] text-lg">
+        <aside className="overflow-hidden w-full flex flex-col gap-2">
+          <section className="overflow-hidden">
+          <motion.h2 
+          initial={{ y: "100%", opacity: 0 }} 
+          whileInView={{ y: 0, opacity: 1 }}     
+          transition={{ duration: 0.40, ease: "easeOut"}}
+          className="text-background font-main font-medium lg:text-[33px] text-lg"
+          >
             {whatwedo}
-          </h2>
+          </motion.h2>
+          </section>
           <ParagraphSkeleton.about />
         </aside>
       </div>
@@ -55,18 +70,34 @@ export default function AboutUs({
       id="about-us"
     >
       <header className="w-full h-12 flex justify-center items-center">
-        <h2 className="text-[#828282] text-md uppercase">{aboutus}</h2>
+        <h2 className="text-[#828282] text-md uppercase">
+          {aboutus}
+          </h2>
       </header>
-      <aside className="w-full flex flex-col gap-2">
-        <h2 className="text-background font-main font-medium lg:text-[33px] text-lg">
-          {we}
-        </h2>
+      <aside className="overflow-hidden w-full flex flex-col gap-2">
+        <section className="overflow-hidden">
+        <motion.h2 
+         initial={{ y: "100%", opacity: 0 }} 
+         whileInView={{ y: 0, opacity: 1 }}     
+         transition={{ duration: 0.40, ease: "easeOut"}}
+        className="text-background font-main font-medium lg:text-[33px] text-lg"
+        >
+        {we}
+        </motion.h2>
+        </section> 
         <Paragraph.about paragraph={data?.history} />
       </aside>
-      <aside className="w-full flex flex-col gap-2">
-        <h2 className="text-background font-main font-medium lg:text-[33px] text-lg">
+      <aside className="overflow-hidden w-full flex flex-col gap-2">
+        <section className="overflow-hidden">
+        <motion.h2 
+         initial={{ y: "100%", opacity: 0 }} 
+         whileInView={{ y: 0, opacity: 1 }}     
+         transition={{ duration: 0.40, ease: "easeOut"}}
+        className="text-background font-main font-medium lg:text-[33px] text-lg"
+        >
           {whatwedo}
-        </h2>
+        </motion.h2>
+        </section>
         <Paragraph.about paragraph={data?.work} />
       </aside>
     </div>

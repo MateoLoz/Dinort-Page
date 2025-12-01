@@ -4,6 +4,9 @@ import { useQuery } from "@tanstack/react-query";
 import { mision } from "@/server/mision";
 import { Card } from "../Cards/Cards";
 import { Skeleton } from "../../ui/skeleton";
+
+import { motion }from "motion/react";
+
 type MisionProps = {
   lang: string;
   misionheader: string;
@@ -45,11 +48,21 @@ export default function Mision({ lang, misionheader }: MisionProps) {
       <header className="w-full h-8 flex justify-center items-center">
         <span className="uppercase font-main font-normal">{misionheader}</span>
       </header>
-      <section className="w-full self-center flex-col gap-4 flex justify-center items-center">
-        <p className=" w-full text-center lg:pl-36 lg:pr-36 pl-4 pr-4 xl:pt-8 xl:pb-8 pt-4 pb-4 xl:text-[50px] lg:text-[40px] md:text-[35px] text-2xl font-main font-light font-italic">
+      <section className=" w-full self-center flex-col gap-4 flex justify-center items-center">
+        <motion.p 
+         initial={{ y: "30%", opacity: 0 }} 
+         whileInView={{ y: 0, opacity: 1 }}     
+         transition={{ duration: 0.35, ease: "easeOut"}}
+        className=" w-full text-center lg:pl-36 lg:pr-36 pl-4 pr-4 xl:pt-8 xl:pb-8 pt-4 pb-4 xl:text-[50px] lg:text-[40px] md:text-[35px] text-2xl font-main font-light font-italic"
+        >
           {`"${data?.mision}"`}
-        </p>
-        <aside className="w-full flex flex-row  gap-4 justify-center items-center">
+        </motion.p>
+        <motion.aside 
+         initial={{ y: "60%", opacity: 0 }} 
+         whileInView={{ y: 0, opacity: 1 }}     
+         transition={{ duration: 0.40, ease: "easeOut"}}
+        className="overflow-hidden w-full flex flex-row  gap-4 justify-center items-center"
+        >
           <Card.experience
             client={data?.metadata.experience.years}
             description={data?.metadata.experience.description}
@@ -58,7 +71,7 @@ export default function Mision({ lang, misionheader }: MisionProps) {
             client={data?.metadata.clients.count}
             description={data?.metadata.clients.description}
           />
-        </aside>
+        </motion.aside>
       </section>
     </div>
   );

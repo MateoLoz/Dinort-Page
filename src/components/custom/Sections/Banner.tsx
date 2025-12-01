@@ -18,7 +18,7 @@ function Banner({ bannerSmall }: BannerProps) {
         alt="Dinort Mecanizados S.A.S logo"
       />
 
-      <aside className="absolute top-[86vh]  w-full px-8 md:px-10 flex justify-end">
+      <aside className="absolute top-[46vh] sm:top-[66vh] md:top-[86vh]  w-full px-8 md:px-10 flex justify-end">
         <small className="text-[var(--navbarPrimaryColor)] font-s uppercase">
           {bannerSmall}
         </small>

@@ -22,7 +22,7 @@ export const FooterNavegation = ({
       </h2>
       <ul className="flex flex-col gap-1">
         <li className="text-gray-2 transition-colors hover:text-white ease font-main font-light text-[12px] md:text-[14px]">
-          <Link href={'#clients'}>
+          <Link className="text-center" href={'#clients'}>
           {navegation_section.clients}
           </Link>
         </li>

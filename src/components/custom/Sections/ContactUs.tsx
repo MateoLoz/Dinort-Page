@@ -13,7 +13,7 @@ type ContactProps = {
 
 const ContactUs = ({ title, href, btntitle }: ContactProps) => {
   return (
-    <div className="flex flex-col gap-4 justify-center items-center md:pt-12 pt-6 lg:pb-36 md:pb-24 pb-12">
+    <div className="flex flex-col gap-4 justify-center items-center md:pt-12 pt-12 lg:pb-36 pb-24">
       
       <section className="overflow-hidden">
       <motion.h2 
@@ -32,10 +32,10 @@ const ContactUs = ({ title, href, btntitle }: ContactProps) => {
        transition={{ duration: 0.70, ease: "easeOut"}}
       className="overflow-hidden"
       >
-       <button className="bg-contact md:p-4 p-2  rounded-3xl flex flex-row gap-2 items-center text-white hover:scale-[1.02] transition hover:bg-card-3">
-        <Link className="w-full flex flex-row justify-center items-center gap-2  sm:text-md md:text-md text-sm" href={href}>
+       <button className="bg-contact md:p-4 p-3  rounded-3xl flex flex-row gap-2 items-center text-white hover:scale-[1.02] transition hover:bg-card-3">
+        <Link className="w-full flex flex-row justify-center items-center gap-2  sm:text-sm md:text-md text-xs" href={href}>
         {btntitle}
-        <LightArrow width={24} height={24} />
+        <LightArrow width={22} height={22} />
         </Link>
       </button>
       </motion.aside>

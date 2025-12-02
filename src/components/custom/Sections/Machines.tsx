@@ -54,7 +54,7 @@ export default function Machines({ lang, machineTitle }: MachineProps) {
       </header>
       <div className="w-full overflow-hidden">
       <motion.section 
-      className="w-full grid grid-cols-[repeat(auto-fit,minmax(330px,1fr))] gap-[15px] justify-center"
+      className="overflow-hidden w-full grid grid-cols-[repeat(auto-fit,minmax(330px,1fr))] gap-[15px] justify-center"
       initial={{ y: "5%", opacity: 0 }} 
       whileInView={{ y: 0, opacity: 1 }}     
       transition={{ duration: 0.40, ease: "easeOut"}}

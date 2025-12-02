@@ -14,7 +14,7 @@ const t = await getDictionary(lang);
         <ContactBanner title={t.contactpage.banner.title} subtitle={t.contactpage.banner.subtitle}/>
         <ContactUsForm/>
         <Sections.navbar lang={t.homepage.lang} navbar={t.homepage.navbar}/>
-        <Footer footer={t.homepage.footer}/>
+        <Footer lang={lang} footer={t.homepage.footer}/>
         </div>
     )
 }

@@ -44,9 +44,9 @@ const JoinUs = ({ title, description, btntitle }: JoinUsProps) => {
          transition={{ duration: 0.60, ease: "easeOut"}}
          className="overflow-hidden"
         >
-         <button className="bg-contact text-white sm:text-md md:text-md text-sm md:p-4 p-2 rounded-3xl flex flex-row justify-center items-center gap-2 hover:scale-[1.02] transition hover:bg-card-3">
+         <button className="bg-contact text-white sm:text-sm md:text-md text-xs md:p-4 p-3 rounded-3xl flex flex-row justify-center items-center gap-2 hover:scale-[1.02] transition hover:bg-card-3">
           {btntitle}
-          <LightArrow  width={22} height={22} />
+          <LightArrow  width={21} height={21} />
         </button>
         </motion.aside>
       </JoinUsForm>

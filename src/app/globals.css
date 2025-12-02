@@ -162,6 +162,10 @@
   scroll-behavior: smooth;
 }
 
+body {
+  background: var(--color-main);
+}
+
 .carousel {
   display: flex;
   flex-direction: row;

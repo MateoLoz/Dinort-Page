@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "motion/react";
 
 type MachineProps = {
   id?: number;
@@ -11,7 +12,12 @@ type MachineProps = {
 
 export default function MachineCard({ ...props }: MachineProps) {
   return (
-    <article className="w-full h-auto flex flex-col gap-4">
+    <motion.article 
+    initial={{ y:"20%", opacity:0}}
+    whileInView={{ y:0, opacity: 1 }}     
+    transition={{ duration: 0.35, ease: "easeOut" }}
+    className="w-full h-auto flex flex-col gap-4"
+    >
       <figure className="bg-card-2 rounded-md w-full xl:h-[350px] h-[250px] flex justify-center items-center">
         <Image
           className="xl:w-[240px] xl:h-[180px] md:w-[200px] h-[150px]  w-[180px] h-[130px]"
@@ -28,6 +34,6 @@ export default function MachineCard({ ...props }: MachineProps) {
       <aside className="w-full lg:px-4 px-2">
         <p className="font-main font-light">{props.description}</p>
       </aside>
-    </article>
+    </motion.article>
   );
 }

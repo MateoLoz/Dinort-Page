@@ -51,7 +51,7 @@ export default async function Home({
           />
         </>
       ) : null}
-      <Footer footer={t.footer} />
+      <Footer lang={lang} footer={t.footer} />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { FooterSection } from "./sections/FooterSection";
 
 type FooterProps = {
+  lang: string,
   footer: {
     headers: {
       brand: string;
@@ -32,7 +33,7 @@ type FooterProps = {
   };
 };
 
-const Footer = ({ footer }: FooterProps) => {
+const Footer = ({ lang, footer }: FooterProps) => {
   return (
     <footer className="w-full rounded-md h-auto bg-footer md:px-8 px-4 py-4 flex flex-col gap-2">
       <aside className="h-auto md:min-h-[45vh] pb-6 flex md:flex-row flex-col justify-between gap-[15px] ">
@@ -43,6 +44,7 @@ const Footer = ({ footer }: FooterProps) => {
         />
         <section className="flex flex-row gap-4 sm:gap-8 md:gap-12 pt-6 md:pt-0">
           <FooterSection.navegation
+           lang={lang}
             title={footer.headers.navegation}
             navegation_section={footer.navegation_section}
           />

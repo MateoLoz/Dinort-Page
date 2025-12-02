@@ -18,18 +18,19 @@ type navbarProps = {
 };
 
 export function DesktopNavBar({ navbar,lang }: navbarProps) {
+
   return (
     <div className="w-full">
       <nav className="w-[95vw] xl:w-[97vw] absolute top-8  h-12 flex flex-row">
         <ul className="xl:w-[90%] w-[73%] flex flex-row sm:gap-12 gap-2 justify-center items-center">
           <li className="inline-block overflow-hidden">
-            <Anchor.flip href="/#clients">{navbar.clients}</Anchor.flip>
+            <Anchor.flip href={`${lang}/#clients`} >{navbar.clients}</Anchor.flip>
           </li>
           <li className="inline-block overflow-hidden">
-            <Anchor.flip href="/#product">{navbar.products}</Anchor.flip>
+            <Anchor.flip href={`${lang}/#product`} >{navbar.products}</Anchor.flip>
           </li>
           <li className="inline-block overflow-hidden">
-            <Anchor.flip href="/#about-us">{navbar.aboutUs}</Anchor.flip>
+            <Anchor.flip href={`${lang}/#about-us`} >{navbar.aboutUs}</Anchor.flip>
           </li>
         </ul>
         <ul className="xl:w-[10%] w-[27%] flex items-center  justify-end md:mr-4">
@@ -62,9 +63,9 @@ const MobileNavBar = ({ navbar, lang }: navbarProps) => {
           px-10 pb-2 w-full flex flex-col justify-center items-center gap-2
         `}
       >
-        <li  className="w-full font-main font-normal text-center text-gray-200 active:text-white p-2 border-b"> <Link href={"/#clients"}>{navbar.clients}</Link></li>
-        <li className="w-full font-main font-normal text-center text-gray-200 active:text-white p-2 border-b"> <Link href={"/#product"}>{navbar.products}</Link></li>
-        <li className="w-full font-main font-normal text-center text-gray-200 active:text-white p-2 border-b"> <Link href={"/#about-us"}>{navbar.aboutUs}</Link></li>
+        <li  className="w-full font-main font-normal text-center text-gray-200 active:text-white p-2 border-b"> <Link href={`${lang}/#clients`}>{navbar.clients}</Link></li>
+        <li className="w-full font-main font-normal text-center text-gray-200 active:text-white p-2 border-b"> <Link href={`${lang}/#product`}>{navbar.products}</Link></li>
+        <li className="w-full font-main font-normal text-center text-gray-200 active:text-white p-2 border-b"> <Link href={`${lang}/#about-us`}>{navbar.aboutUs}</Link></li>
         <li className="w-full font-main font-normal text-center text-gray-200 active:text-white p-2"> <Link  href={`${lang}/contact`}>{navbar.contactUs}</Link></li>
       </ul>
     </div>

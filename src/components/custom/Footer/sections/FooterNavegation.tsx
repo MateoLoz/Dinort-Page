@@ -2,6 +2,7 @@ import { LightArrow } from "@/icons/LightArrow";
 import Link from "next/link";
 
 type FooterNavegationProps = {
+  lang: string,
   title: string;
   navegation_section: {
     clients: string;
@@ -12,6 +13,7 @@ type FooterNavegationProps = {
 };
 
 export const FooterNavegation = ({
+  lang,
   title,
   navegation_section,
 }: FooterNavegationProps) => {
@@ -22,17 +24,17 @@ export const FooterNavegation = ({
       </h2>
       <ul className="flex flex-col gap-1">
         <li className="text-gray-2 transition-colors hover:text-white ease font-main font-light text-[12px] md:text-[14px]">
-          <Link className="text-center" href={'/#clients'}>
+          <Link className="text-center" href={`${lang}/#clients`}>
           {navegation_section.clients}
           </Link>
         </li>
         <li className="text-gray-2 transition-colors hover:text-white ease font-main font-light text-[12px] md:text-[14px]">
-        <Link href={'/#product'}>
+        <Link href={`${lang}/#product`}>
         {navegation_section.products}
           </Link>
         </li>
         <li className="text-gray-2 transition-colors hover:text-white ease font-main font-light text-[12px] md:text-[14px]">
-          <Link href={'/#about-us'}>
+          <Link href={`${lang}/#about-us`}>
           {navegation_section.about_us}
           </Link>
         </li>

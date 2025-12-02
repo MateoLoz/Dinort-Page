@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import Link from "next/link";
 
 const hoverVariants = {
   initial: { scaleX: 0 },
@@ -9,10 +10,9 @@ const hoverVariants = {
 
 const FlipLink = ({ children, href }: { children: string; href: string }) => {
   return (
-    <motion.a
+    <motion.article
       initial="initial"
       whileHover="hovered"
-      href={href}
       className="relative block"
     >
       <motion.div className="inline-block overflow-hidden">
@@ -29,7 +29,7 @@ const FlipLink = ({ children, href }: { children: string; href: string }) => {
               }}
               key={index}
             >
-              {letter}
+              <Link href={href}>{letter}</Link>
             </motion.span>
           );
         })}
@@ -41,7 +41,7 @@ const FlipLink = ({ children, href }: { children: string; href: string }) => {
           transition={{ duration: 0.35, ease: "easeOut" }}
         ></motion.div>
       </motion.div>
-    </motion.a>
+    </motion.article>
   );
 };
 

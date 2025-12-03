@@ -24,17 +24,17 @@ export const FooterNavegation = ({
       </h2>
       <ul className="flex flex-col gap-1">
         <li className="text-gray-2 transition-colors hover:text-white ease font-main font-light text-[12px] md:text-[14px]">
-          <Link className="text-center" href={`${lang}/#clients`}>
+          <Link className="text-center" href={`/${lang}/#clients`}>
           {navegation_section.clients}
           </Link>
         </li>
         <li className="text-gray-2 transition-colors hover:text-white ease font-main font-light text-[12px] md:text-[14px]">
-        <Link href={`${lang}/#product`}>
+        <Link href={`/${lang}/#product`}>
         {navegation_section.products}
           </Link>
         </li>
         <li className="text-gray-2 transition-colors hover:text-white ease font-main font-light text-[12px] md:text-[14px]">
-          <Link href={`${lang}/#about-us`}>
+          <Link href={`/${lang}/#about-us`}>
           {navegation_section.about_us}
           </Link>
         </li>
@@ -44,6 +44,7 @@ export const FooterNavegation = ({
 };
 
 type FooterPoliticsProps = {
+  lang: string;
   title: string;
   politics_section: {
     politics: string;
@@ -51,6 +52,7 @@ type FooterPoliticsProps = {
 };
 
 export const FooterPolitics = ({
+  lang,
   title,
   politics_section,
 }: FooterPoliticsProps) => {
@@ -61,7 +63,8 @@ export const FooterPolitics = ({
       </h2>
       <ul className="flex flex-col gap-1">
         <li className="text-gray-2 font-main transition-colors hover:text-white ease font-normal text-[12px] md:text-[14px]">
-          {politics_section.politics}
+          <Link href={`/${lang}/politics`}>{politics_section.politics}</Link>
+         
         </li>
       </ul>
     </aside>

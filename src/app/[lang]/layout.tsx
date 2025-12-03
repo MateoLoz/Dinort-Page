@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import "../globals.css";
+import '../globals.css';
+
 import { TanstackProvider } from "@/components/providers/tanstack-provider";
 
 export const metadata: Metadata = {
-  title: "Dinort",
+  title: "Dinort Mecanizados S.A.S",
   description: "Dinort Mecanizados S.A.S",
   icons: {
     icon: "/Dinort.svg",

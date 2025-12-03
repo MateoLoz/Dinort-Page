@@ -13,7 +13,7 @@ const FlipLink = ({ children, href }: { children: string; href: string }) => {
     <motion.article
       initial="initial"
       whileHover="hovered"
-      className="relative block"
+      className="relative block pt-3"
     >
       <motion.div className="inline-block overflow-hidden">
         {children.split("").map((letter, index) => {
@@ -37,7 +37,7 @@ const FlipLink = ({ children, href }: { children: string; href: string }) => {
           variants={{ hoverVariants }}
           initial={{ width: 0 }}
           whileHover={{ width: "100%" }}
-          className="h-[2px] top-6 absolute inset-0 bg-white mix-blend-mode-difference"
+          className="h-[2px] top-10 absolute inset-0 bg-white mix-blend-mode-difference"
           transition={{ duration: 0.35, ease: "easeOut" }}
         ></motion.div>
       </motion.div>

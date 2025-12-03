@@ -49,6 +49,7 @@ const Footer = ({ lang, footer }: FooterProps) => {
             navegation_section={footer.navegation_section}
           />
           <FooterSection.politics
+            lang={lang}
             title={footer.headers.politics}
             politics_section={footer.politics_section}
           />

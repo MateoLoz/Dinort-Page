@@ -98,27 +98,27 @@
     "politicspage": {
     "pagetitle": "Terms and Conditions",
     "provider": {
-        "title": "Provider Information",
+        "title": "1. Provider Information",
         "paragraph": "This document establishes the Terms and Conditions for using the service offered by Dinort Mecanizados S.A.S, hereinafter 'the Company'. Address: Ramirez de Velazco 1350, T4000EGF San Miguel de Tucumán, Tucumán. Contact Email: mecanizados@dinort.com.ar. Phone: 0381 427-6598. Using the platform implies full acceptance of these terms."
     },
     "goal": {
-        "title": "Purpose of the Service",
+        "title": "2. Purpose of the Service",
         "paragraph": "The website has the sole purpose of offering the user two functionalities: \n\n Submit their curriculum vitae for recruitment processes or future job opportunities. Submit a business proposal for evaluation by the Company. The site does not provide user registration, allow comments, or other interactions, and acts solely as a formal contact channel. The Company may modify or update the site and its functionalities at any time without prior notice."
     },
     "users": {
-        "title": "User Acceptance",
+        "title": "3. User Acceptance",
         "paragraph": "The user agrees that: They have read and understood these Terms. They will provide truthful, complete, and up-to-date information. They will use the functionalities only for the intended purposes. They are over 18 years old or have the corresponding authorization to submit information. Submitting a CV or proposal does not guarantee an immediate response, an interview, a contract, or acceptance of the submitted material."
     },
     "rules": {
-        "title": "Permitted and Prohibited Use",
+        "title": "4. Permitted and Prohibited Use",
         "paragraph": "Permitted Use The user may: Complete the forms enabled to submit their CV. Complete the forms to submit a business proposal. Communicate through the official channels established on this site. Prohibited Use It is strictly forbidden to: Submit false or fraudulent information, or information that does not belong to the user. Upload files containing viruses, malware, or potentially harmful content. Use the site for purposes other than those established (e.g., advertising, spam, inappropriate content). Impersonate someone or submit information belonging to third parties without authorization. Attempt to access, manipulate, or interfere with the site's or Company's internal systems. The Company may block or restrict access in case of misuse."
     },
     "property": {
-        "title": "Intellectual Property",
+        "title": "5. Intellectual Property",
         "paragraph": "All texts, trademarks, logos, images, site design, source code, and associated content are the exclusive property of the Company or its licensors. The user does not acquire any rights over such content and may not: Copy, reproduce, or distribute it. Modify or use it for personal or commercial purposes. Use the Company's visual identity without prior written authorization."
     },
     "accounts": {
-        "title": "User Accounts and Registration",
+        "title": "6. User Accounts and Registration",
         "paragraph": "The site does not require or allow the creation of user accounts. However, when submitting a CV or proposal, the user guarantees that the provided information is correct and that they have the necessary rights to share the attached documents. The Company may reject submissions containing incomplete, unreadable information or those that violate these Terms."
     }
 },

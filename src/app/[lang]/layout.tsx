@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import '../globals.css';
 
 import { TanstackProvider } from "@/components/providers/tanstack-provider";
+import ScrollToTop from "./utils/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "Dinort Mecanizados S.A.S",
@@ -24,7 +25,8 @@ export default async function RootLayout({ children, params }: layoutProps) {
   return (
     <html lang={lang}>
       <head></head>
-      <body className={`p-2 sm:p-4 antialiased bg-main`}>
+      <body className={`antialiased p-2 sm:p-4 bg-main`}>
+      <ScrollToTop/>
         <TanstackProvider>{children}</TanstackProvider>
       </body>
     </html>

@@ -164,6 +164,17 @@
 
 body {
   background: var(--color-main);
+  transition-property: opacity, background, transform,filter;
+  transition-timing-function: ease-in-out;
+}
+
+
+.page-transition {
+  opacity: 0;
+  background: black;
+  transform: translateY(40px);
+  filter: blur(12px);
+  transition-duration: 500ms;
 }
 
 .carousel {

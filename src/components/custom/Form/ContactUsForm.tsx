@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "motion/react";
 
 import { useForm } from "react-hook-form";
 import z from "zod";
@@ -69,9 +70,13 @@ export const ContactUsForm = () => {
        }
 
     return(
-        <div className="w-full flex flex-col justify-center items-center">
+        <div className=" w-full flex flex-col justify-center items-center">
                <Form  {...form}>
-         <form className=" w-[90vw] md:w-[65vw] lg:w-[55vw] xl:w-[45vw]  lg:px-12 md:px-0  relative top-[-60px] flex flex-col gap-4" onSubmit={form.handleSubmit(onSubmit)}>
+         <motion.form 
+         initial={{y:"20%", opacity:0}}
+         animate={{y:0, opacity:1, transition:{duration:0.85, ease:"easeInOut"}}}
+         className="w-[90vw] md:w-[65vw] lg:w-[55vw] xl:w-[45vw]  lg:px-12 md:px-0  relative top-[-60px] flex flex-col gap-4" onSubmit={form.handleSubmit(onSubmit)}
+         >
             <section className="z-10 flex flex-col sm:flex-row md:gap-4 gap-2">
             <FormField  control={form.control} name="firstName" render={({field})=> (
             <FormItem>
@@ -175,7 +180,7 @@ export const ContactUsForm = () => {
            >{btn}</button>
            </section>
 
-         </form>
+         </motion.form>
         </Form>
         </div>
     )

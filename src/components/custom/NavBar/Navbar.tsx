@@ -6,6 +6,7 @@ import Hamburger from "@/icons/Hamburger";
 import { useState } from "react";
 import Link from "next/link";
 
+
 type navbarProps = {
   navbar: {
     clients: string;

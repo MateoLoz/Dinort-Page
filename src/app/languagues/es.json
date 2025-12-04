@@ -98,27 +98,27 @@
     "politicspage":{
         "pagetitle":"Terminos y Condiciones",
         "provider":{
-            "title": "Informacion del Proveedor",
+            "title": "1. Informacion del Proveedor",
             "paragraph": "El presente documento establece los Términos y Condiciones de uso del servicio ofrecido por Dinort Mecanizados S.A.S, en adelante “la Empresa”. Domicilio: Ramirez de Velazco 1350, T4000EGF San Miguel de Tucumán, Tucumán.  Correo de contacto: mecanizados@dinort.com.ar. Teléfono: 0381 427-6598. El uso de la plataforma implica la aceptación plena de estos términos."
         },
        "goal": {
-            "title": "Objeto del Servicio",
+            "title": "2. Objeto del Servicio",
             "paragraph": "El sitio web tiene como único propósito ofrecer al usuario dos funcionalidades: Enviar su currículum vitae para procesos de selección o futuras oportunidades laborales. Eviar una propuesta de negocio para evaluación por parte de la Empresa. El sitio no ofrece registro de usuarios, no permite comentarios ni otras interacciones, y actúa únicamente como un canal de contacto formal. La Empresa podrá modificar o actualizar el sitio y sus funcionalidades en cualquier momento sin previo aviso."
         },
         "users":{
-            "title":"Aceptación del Usuario",
+            "title":"3. Aceptación del Usuario",
             "paragraph":"El usuario acepta que: Ha leído y comprende estos Términos. Proporcionará información veraz, completa y actualizada. Utilizará las funciones únicamente para los fines previstos. Es mayor de 18 años o cuenta con la autorización correspondiente para enviar la información. El envío de un currículum o de una propuesta no garantiza una respuesta inmediata, una entrevista, un contrato, ni la aceptación del material enviado."
         },
         "rules": {
-             "title":"Uso Permitido y Prohibido",
+             "title":"4. Uso Permitido y Prohibido",
              "paragraph":"Uso Permitido El usuario puede: Completar los formularios habilitados para enviar su CV. Completar los formularios para remitir una propuesta de negocio. Comunicarse a través de los medios oficiales establecidos en este sitio. Uso Prohibido Queda terminantemente prohibido: Enviar información falsa, fraudulenta o que no corresponda al usuario. Subir archivos que contengan virus, malware o contenido potencialmente dañino. Utilizar el sitio para fines distintos a los establecidos (por ejemplo, publicidad, spam, contenido inapropiado). Suplantar identidad o enviar información perteneciente a terceros sin autorización. Intentar acceder, manipular o interferir con los sistemas internos del sitio o de la Empresa. La Empresa podrá bloquear o restringir el acceso ante cualquier uso indebido."
         },
         "property": {
-            "title":"Propiedad Intelectual",
+            "title":"5. Propiedad Intelectual",
             "paragraph": "Todos los textos, marcas, logos, imágenes, diseño del sitio, código fuente y contenidos asociados son propiedad exclusiva de la Empresa o de sus licenciantes. El usuario no adquiere ningún derecho sobre dichos contenidos y no puede: Copiarlos, reproducirlos o distribuirlos. Modificarlos o utilizarlos para fines propios o comerciales. Usar la identidad visual de la Empresa sin autorización previa por escrito."
         },
         "accounts": {
-            "title": "Registro y Cuentas de Usuario",
+            "title": "6. Registro y Cuentas de Usuario",
             "paragraph": "El sitio no requiere ni permite la creación de cuentas de usuario. Sin embargo, al enviar su CV o propuesta, el usuario garantiza que la información ingresada es correcta y que cuenta con los derechos necesarios para compartir los documentos adjuntos. La Empresa puede rechazar envíos que contengan datos incompletos, ilegibles o que incumplan estos Términos."
         }
     },

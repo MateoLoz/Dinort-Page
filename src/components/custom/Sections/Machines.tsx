@@ -42,8 +42,8 @@ export default function Machines({ lang, machineTitle }: MachineProps) {
   }
 
   return (
-    <div className="w-full flex flex-col justify-center items-center gap-2  px-4 mb-12 lg:mt-0 md:mt-12 mt-6">
-      <header className="w-full flex flex-row gap-2 items-center  mb-12">
+    <div className="w-full flex flex-col justify-center items-center gap-2  px-4 mb-12 lg:mt-12 xl:md-0 md:mt-12 mt-6">
+      <header className="w-full flex flex-row gap-2 items-center mb-4 md:mb-6 lg:mb-12">
         <h2 className="font-main font-normal xl:text-[40px] sm:text-3xl text-2xl">
           {machineTitle}
         </h2>
@@ -54,7 +54,7 @@ export default function Machines({ lang, machineTitle }: MachineProps) {
       </header>
       <div className="w-full overflow-hidden">
       <motion.section 
-      className="overflow-hidden w-full grid grid-cols-[repeat(auto-fit,minmax(330px,1fr))] gap-[15px] justify-center"
+      className="overflow-hidden w-full grid grid-cols-[repeat(auto-fit,minmax(330px,1fr))] md:gap-[15px] gap-[30px] justify-center"
       initial={{ y: "5%", opacity: 0 }} 
       whileInView={{ y: 0, opacity: 1 }}     
       transition={{ duration: 0.40, ease: "easeOut"}}

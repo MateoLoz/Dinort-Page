@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "motion/react";
+
 import { LightArrow } from "@/icons/LightArrow";
 import Link from "next/link";
 
@@ -18,7 +22,11 @@ export const FooterNavegation = ({
   navegation_section,
 }: FooterNavegationProps) => {
   return (
-    <aside className="flex flex-col gap-2 text-center md:text-start">
+    <motion.aside 
+    initial={{ opacity:0 }}
+    whileInView={{ opacity:1 }}
+    transition={{duration:0.6, ease:"easeInOut"}}
+    className="flex flex-col gap-2 text-center md:text-start">
       <h2 className="lg:text-[22px] text-[18px] text-white font-main font-medium">
         {title}
       </h2>
@@ -39,7 +47,7 @@ export const FooterNavegation = ({
           </Link>
         </li>
       </ul>
-    </aside>
+    </motion.aside>
   );
 };
 
@@ -57,7 +65,12 @@ export const FooterPolitics = ({
   politics_section,
 }: FooterPoliticsProps) => {
   return (
-    <aside className="flex flex-col gap-2 text-center md:text-start">
+    <motion.aside 
+    initial={{ opacity:0 }}
+    whileInView={{ opacity:1 }}
+    transition={{duration:0.6, ease:"easeInOut"}}
+    className="flex flex-col gap-2 text-center md:text-start"
+    >
       <h2 className="lg:text-[22px] text-[18px] text-white font-main font-medium">
         {title}
       </h2>
@@ -67,7 +80,7 @@ export const FooterPolitics = ({
          
         </li>
       </ul>
-    </aside>
+    </motion.aside>
   );
 };
 
@@ -82,7 +95,12 @@ type FooterSocialProps = {
 
 export const FooterSocial = ({ title, socials_section }: FooterSocialProps) => {
   return (
-    <aside className="flex flex-col gap-2 text-center md:text-start">
+    <motion.aside 
+    initial={{ opacity:0 }}
+    whileInView={{ opacity:1 }}
+    transition={{duration:0.6, ease:"easeInOut"}}
+    className="flex flex-col gap-2 text-center md:text-start"
+    >
       <h2 className="lg:text-[22px] text-[18px] text-white font-main font-medium">
         {title}
       </h2>
@@ -106,6 +124,6 @@ export const FooterSocial = ({ title, socials_section }: FooterSocialProps) => {
          
         </li>
       </ul>
-    </aside>
+    </motion.aside>
   );
 };

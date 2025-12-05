@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "motion/react";
+
 type FooterHeaderProps = {
   brand: string;
   location: string;
@@ -6,16 +10,37 @@ type FooterHeaderProps = {
 
 export const FooterHeader = ({ brand, location, email }: FooterHeaderProps) => {
   return (
-    <section className="flex flex-col gap-2 ">
-      <h2 className="lg:text-[26px] text-[22px] text-white font-main font-medium">
+    <section className="flex flex-col gap-2">
+      <section className="overflow-hidden">
+      <motion.h2 
+       initial={{y:"100%", opacity:0}}
+       whileInView={{y:0, opacity:1}}
+       transition={{ duration: 0.40, ease: "easeOut"}}
+      className="lg:text-[26px] text-[22px] text-white font-main font-medium">
         {brand}
-      </h2>
-      <span className="lg:text-[16px] md:text-[14px] text-[12px] font-main font-normal text-gray-1">
+      </motion.h2>
+      </section>
+      <section className="overflow-hidden">
+      <motion.h4
+       initial={{y:"100%", opacity:0}}
+       whileInView={{y:0, opacity:1}}
+       transition={{ duration: 0.60, ease: "easeOut"}}
+      className="lg:text-[16px] md:text-[14px] text-[12px] font-main font-normal text-gray-1"
+      >
         {location}
-      </span>
-      <span className="lg:text-[16px] md:text-[14px] text-[12px] font-main font-normal text-gray-1">
+      </motion.h4>
+      </section>
+       
+       <section className="overflow-hidden">
+       <motion.h3 
+        initial={{y:"100%", opacity:0}}
+        whileInView={{y:0, opacity:1}}
+        transition={{ duration: 0.60, ease: "easeOut"}}
+       className="lg:text-[16px] md:text-[14px] text-[12px] font-main font-normal text-gray-1"
+       >
         {email}
-      </span>
+      </motion.h3 >
+       </section>
     </section>
   );
 };

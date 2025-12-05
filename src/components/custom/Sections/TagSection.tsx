@@ -24,13 +24,18 @@ const MachineTagSection = ({ lang }: MachineTagProps) => {
 
   if (isLoading) {
     return (
-      <div className="lg:px-36 md:px-12 px-4 w-full grid  grid-cols-[repeat(auto-fit,minmax(120px,1fr))] sm:grid-cols-[repeat(auto-fit,minmax(160px,1fr))]  md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] lg:grid-cols-[repeat(auto-fit,minmax(330px,1fr))] lg:gap-[10px] md:gap-[8px] gap-[6px] place-center items-center justify-center lg:py:24 py-0 lg:mb-24 mb-6">
+      <motion.div
+      initial={{ y: "20%", opacity: 0 }} 
+      whileInView={{ y: 0, opacity: 1 }}     
+      transition={{ duration: 0.40, ease: "easeOut"}}
+      className="lg:px-48 md:px-12 px-4 w-full grid  grid-cols-[repeat(auto-fit,minmax(120px,1fr))] sm:grid-cols-[repeat(auto-fit,minmax(160px,1fr))]  md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] lg:grid-cols-[repeat(auto-fit,minmax(330px,1fr))] lg:gap-[10px] md:gap-[8px] gap-[6px] place-center items-center justify-center lg:py-24 mb-4 md:py-16 sm:py-12 py-8"
+      >
         <Tag.skeleton />
         <Tag.skeleton />
         <Tag.skeleton />
         <Tag.skeleton />
         <Tag.skeleton />
-      </div>
+      </motion.div>
     );
   }
 

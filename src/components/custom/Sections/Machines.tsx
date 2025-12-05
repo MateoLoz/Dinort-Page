@@ -31,7 +31,7 @@ export default function Machines({ lang, machineTitle }: MachineProps) {
             fill="#000"
           />
         </header>
-        <section className="w-full grid grid-cols-[repeat(auto-fit,minmax(330px,1fr))] gap-[15px] justify-center">
+        <section className="w-full grid grid-cols-[repeat(auto-fit,minmax(330px,1fr))] md:gap-[15px] gap-[30px] justify-center">
           <Card.machineSkeleton />
           <Card.machineSkeleton />
           <Card.machineSkeleton />
